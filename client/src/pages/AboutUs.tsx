@@ -1,10 +1,10 @@
 export const AboutUs = (): JSX.Element => {
   const teamMembers = [
-    { name: "Mr. Prabhu Dasu", role: "President", image: "/figmaAssets/image-1.png" },
-    { name: "Mr. Lorem", role: "Vice President", image: "/figmaAssets/rectangle-3.png" },
-    { name: "Mr. Ipsum", role: "Secretary", image: "/figmaAssets/rectangle-3-1.png" },
-    { name: "Mrs. Lorem", role: "Joint Secretary", image: "/figmaAssets/rectangle-3-2.png" },
-    { name: "Mrs. Ipsum", role: "Treasurer", image: "/figmaAssets/rectangle-4.png" },
+    { name: "Mr. Prabhu Dasu", role: "President" },
+    { name: "Mr. Lorem", role: "Vice President" },
+    { name: "Mr. Ipsum", role: "Secretary" },
+    { name: "Mrs. Lorem", role: "Joint Secretary" },
+    { name: "Mrs. Ipsum", role: "Treasurer" },
   ];
 
   const coreValues = [
@@ -277,7 +277,7 @@ export const AboutUs = (): JSX.Element => {
               <div key={idx} className="text-center">
                 <div className="bg-gray-300 h-40 rounded-lg mb-4 overflow-hidden">
                   {idx === 0 ? (
-                    <img src={member.image} alt={member.name} className="w-full h-full object-cover" />
+                    <img src="/figmaAssets/image-3.png" alt={member.name} className="w-full h-full object-cover" />
                   ) : (
                     <div className="w-full h-full bg-gray-400"></div>
                   )}
@@ -290,7 +290,7 @@ export const AboutUs = (): JSX.Element => {
 
           {/* Testimonial */}
           <div className="bg-black text-white rounded-xl p-8 mb-12 flex gap-8 items-center">
-            <div className="w-32 h-32 rounded-xl overflow-hidden flex-shrink-0 border-4 border-orange-500">
+            <div className="w-32 h-32 rounded-xl overflow-hidden flex-shrink-0 border-4 border-green-500">
               <img src="/figmaAssets/image-3.png" alt="Mr. Prabhu Dasu" className="w-full h-full object-cover" />
             </div>
             <div>
@@ -311,9 +311,9 @@ export const AboutUs = (): JSX.Element => {
           <div className="flex justify-center items-center gap-8 flex-wrap">
             <img src="/figmaAssets/image-1-1.png" alt="Partner" className="h-16 object-contain" />
             <img src="/figmaAssets/image-3-1.png" alt="Partner" className="h-16 object-contain" />
-            <div className="h-16 bg-gray-300 rounded px-6 flex items-center text-gray-600">Partner Logo</div>
-            <div className="h-16 bg-gray-300 rounded px-6 flex items-center text-gray-600">Partner Logo</div>
-            <div className="h-16 bg-gray-300 rounded px-6 flex items-center text-gray-600">Partner Logo</div>
+            <div className="h-16 bg-gray-300 rounded px-6 flex items-center text-gray-600 font-medium">Partner</div>
+            <div className="h-16 bg-gray-300 rounded px-6 flex items-center text-gray-600 font-medium">Partner</div>
+            <div className="h-16 bg-gray-300 rounded px-6 flex items-center text-gray-600 font-medium">Partner</div>
           </div>
         </div>
       </section>
@@ -360,7 +360,7 @@ export const AboutUs = (): JSX.Element => {
       {/* WhatsApp Button */}
       <div className="fixed bottom-8 right-8 flex items-center gap-2">
         <img src="/figmaAssets/logos-whatsapp-icon.svg" alt="WhatsApp" className="w-16 h-16" />
-        <div className="bg-white px-4 py-2 rounded-xl shadow-lg">Chat with us</div>
+        <div className="bg-white px-4 py-2 rounded-xl shadow-lg text-gray-800">Chat with us</div>
       </div>
     </div>
   );
