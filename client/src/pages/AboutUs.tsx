@@ -66,7 +66,7 @@ export const AboutUs = (): JSX.Element => {
           <nav className="flex gap-8">
             <a href="/" className="text-gray-700 hover:text-orange-500">Home</a>
             <a href="/about" className="text-orange-500 font-medium border-b-4 border-orange-500 pb-2">About us</a>
-            <a href="/" className="text-gray-700 hover:text-orange-500">Services</a>
+            <a href="/services" className="text-gray-700 hover:text-orange-500">Services</a>
             <a href="/" className="text-gray-700 hover:text-orange-500">Contact us</a>
           </nav>
           <button className="border-2 border-orange-500 text-orange-500 px-4 py-2 rounded-lg font-medium">Donate</button>
