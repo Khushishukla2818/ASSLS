@@ -8,7 +8,7 @@ export const Services = (): JSX.Element => {
     },
     {
       title: "Women Empowerment",
-      description: "Women are the backbone of community resilience, and ASSLS prioritizes their empowerment through multi-dimensional support systems. Our programs are designed to improve women's participation in natural resource management and decision-making processes at the village level. We provide vocational training and capacity-building capsules that enable destitute women and female heads of households to achieve financial independence. By focusing on skill development, we help women transition from vulnerable circumstances to becoming influential change agents within their local networks.\n\nWe also conduct specific awareness programs on family sustenance, legal rights, and health consciousness to ensure holistic upliftment. Our vision is a society where women have a seat and a voice at every table, free from wage gaps and social limitations. Through continuous motivation and integrated actions, we ensure that women are leading the way toward a more just and fertile world.",
+      description: "Women are the backbone of community resilience, and ASSLS prioritizes their empowerment through multi-dimensional support systems. Our programs are designed to improve women's participation in natural resource management and decision-making processes at the village level. We provide vocational training and capacity-building capsules that enable substitute women and female heads of households to achieve financial independence. By focusing on skill development, we help women transition from vulnerable circumstances to becoming influential change agents within their local networks.\n\nWe also conduct specific awareness programs on family sustenance, legal rights, and health consciousness to ensure holistic upliftment. Our vision is a society where women have a seat and a voice at every table, free from wage gaps and social limitations. Through continuous motivation and integrated actions, we ensure that women are leading the way toward a more just and fertile world.",
       image: "/figmaAssets/rectangle-6.png",
       imagePosition: "left"
     },
@@ -69,78 +69,78 @@ export const Services = (): JSX.Element => {
         <div className="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
           <img src="/figmaAssets/image-1.png" alt="ASSLS Logo" className="h-16" />
           <nav className="flex gap-8">
-            <a href="/" className="text-gray-700 hover:text-orange-500 font-medium">Home</a>
-            <a href="/about" className="text-gray-700 hover:text-orange-500 font-medium">About us</a>
-            <a href="/services" className="text-orange-500 font-bold border-b-2 border-orange-500 pb-1">Services</a>
-            <a href="/contact" className="text-gray-700 hover:text-orange-500 font-medium">Contact us</a>
+            <a href="/" className="text-gray-700 hover:text-orange-500 font-medium text-lg">Home</a>
+            <a href="/about" className="text-gray-700 hover:text-orange-500 font-medium text-lg">About us</a>
+            <a href="/services" className="text-[#ff5f00] font-bold border-b-4 border-[#ff5f00] pb-1 text-lg">Services</a>
+            <a href="/" className="text-gray-700 hover:text-orange-500 font-medium text-lg">Contact us</a>
           </nav>
-          <button className="border-2 border-orange-500 text-orange-500 px-6 py-2 rounded-lg font-bold hover:bg-orange-50 transition">Donate</button>
+          <button className="border-2 border-[#ff5f00] text-[#ff5f00] px-8 py-2 rounded-xl font-bold hover:bg-orange-50 transition text-lg">Donate</button>
         </div>
       </header>
 
       {/* Hero Section */}
-      <section className="bg-[#6094BD] text-white py-16 px-4 md:px-8 lg:px-16">
+      <section className="bg-[#6094BD] text-white py-20 px-4 md:px-8 lg:px-16">
         <div className="max-w-7xl mx-auto">
-          <h1 className="text-5xl md:text-6xl font-serif mb-6 text-center leading-tight font-medium">
+          <h1 className="text-5xl md:text-7xl font-serif mb-8 text-center leading-tight font-medium">
             Supporting Communities Through<br />Meaningful and Sustainable Services
           </h1>
-          <p className="text-center text-lg mb-12 max-w-4xl mx-auto font-light">
-            We deliver community-driven programs that support livelihoods, health, education, and social well-being.<br />
+          <p className="text-center text-xl mb-16 max-w-4xl mx-auto font-light leading-relaxed">
+            We deliver community-driven programs that support livelihoods, health, education, and social well-being.
             Each service is focused on creating sustainable and long-term impact at the grassroots level.
           </p>
           
           {/* Hero Images Scroll/Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-8">
-            <div className="rounded-2xl overflow-hidden h-60">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-12">
+            <div className="rounded-3xl overflow-hidden h-64 shadow-xl">
               <img src="/figmaAssets/rectangle-1.png" alt="Activity 1" className="w-full h-full object-cover" />
             </div>
-            <div className="rounded-2xl overflow-hidden h-60">
+            <div className="rounded-3xl overflow-hidden h-64 shadow-xl">
               <img src="/figmaAssets/rectangle-2.png" alt="Activity 2" className="w-full h-full object-cover" />
             </div>
-            <div className="rounded-2xl overflow-hidden h-60">
+            <div className="rounded-3xl overflow-hidden h-64 shadow-xl">
               <img src="/figmaAssets/rectangle-3.png" alt="Activity 3" className="w-full h-full object-cover" />
             </div>
-            <div className="rounded-2xl overflow-hidden h-60">
+            <div className="rounded-3xl overflow-hidden h-64 shadow-xl">
               <img src="/figmaAssets/rectangle-4.png" alt="Activity 4" className="w-full h-full object-cover" />
             </div>
           </div>
 
-          <div className="flex items-center gap-2 justify-start cursor-pointer group">
-            <div className="w-6 h-6 rounded-full border border-white flex items-center justify-center group-hover:bg-white group-hover:text-[#6094BD] transition">
-              <span className="text-[10px] ml-0.5">▶</span>
+          <div className="flex items-center gap-4 justify-start cursor-pointer group w-fit">
+            <div className="w-10 h-10 rounded-full border-2 border-white flex items-center justify-center group-hover:bg-white group-hover:text-[#6094BD] transition-all">
+              <span className="text-sm ml-1 text-white group-hover:text-[#6094BD]">▶</span>
             </div>
-            <span className="text-sm font-medium">Watch our videos</span>
+            <span className="text-lg font-bold tracking-wide">Watch our videos</span>
           </div>
         </div>
       </section>
 
       {/* Services Section */}
-      <section className="py-16 px-4 md:px-8 lg:px-16 max-w-7xl mx-auto relative">
-        <div className="flex items-center justify-between mb-12">
-          <h2 className="text-[#E86B2C] text-2xl font-bold">Our Services</h2>
-          <div className="fixed right-8 top-1/2 -translate-y-1/2 z-50 flex flex-col items-center gap-2">
-            <div className="bg-white p-2 rounded-full shadow-xl cursor-pointer hover:scale-110 transition">
-              <img src="/figmaAssets/logos-whatsapp-icon.svg" alt="WhatsApp" className="w-12 h-12" />
+      <section className="py-20 px-4 md:px-8 lg:px-16 max-w-7xl mx-auto relative">
+        <div className="flex items-center justify-between mb-20">
+          <h2 className="text-[#ff5f00] text-3xl font-bold uppercase tracking-widest">Our Services</h2>
+          <div className="fixed right-8 bottom-8 z-50 flex flex-col items-center gap-3">
+            <div className="bg-white p-3 rounded-full shadow-2xl cursor-pointer hover:scale-110 active:scale-95 transition-all">
+              <img src="/figmaAssets/logos-whatsapp-icon.svg" alt="WhatsApp" className="w-14 h-14" />
             </div>
-            <span className="bg-white px-3 py-1 rounded-full shadow-md text-xs font-bold text-gray-700">Chat with us</span>
+            <span className="bg-white px-4 py-1 rounded-full shadow-lg text-xs font-black text-gray-800 uppercase tracking-tighter">Chat with us</span>
           </div>
         </div>
 
         {/* Services List */}
-        <div className="space-y-32">
+        <div className="space-y-40">
           {services.map((service, idx) => (
-            <div key={idx} className="space-y-8">
-              <h3 className="text-4xl font-bold text-[#333333]">{service.title}</h3>
+            <div key={idx} className="space-y-12">
+              <h3 className="text-5xl font-bold text-[#111111] leading-tight">{service.title}</h3>
               
-              <div className={`flex flex-col ${service.imagePosition === 'right' ? 'lg:flex-row' : 'lg:flex-row-reverse'} gap-12 items-start`}>
-                <div className="flex-1 space-y-6">
+              <div className={`flex flex-col ${service.imagePosition === 'right' ? 'lg:flex-row' : 'lg:flex-row-reverse'} gap-20 items-start`}>
+                <div className="flex-1 space-y-8">
                   {service.description.split('\n\n').map((p, i) => (
-                    <p key={i} className="text-gray-700 leading-relaxed text-lg font-light">
+                    <p key={i} className="text-gray-700 leading-relaxed text-xl font-light">
                       {p}
                     </p>
                   ))}
                 </div>
-                <div className="lg:w-[45%] w-full rounded-2xl overflow-hidden shadow-sm">
+                <div className="lg:w-[48%] w-full rounded-[40px] overflow-hidden shadow-2xl">
                   <img src={service.image} alt={service.title} className="w-full aspect-[4/3] object-cover" />
                 </div>
               </div>
@@ -150,18 +150,18 @@ export const Services = (): JSX.Element => {
       </section>
 
       {/* CTA Section */}
-      <section className="mt-20 relative h-[500px] flex items-center justify-center">
+      <section className="mt-32 relative h-[600px] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 z-0">
-          <img src="/figmaAssets/placeholder---image.png" alt="Community" className="w-full h-full object-cover" />
-          <div className="absolute inset-0 bg-black/40"></div>
+          <img src="/figmaAssets/placeholder---image.png" alt="Community" className="w-full h-full object-cover scale-105" />
+          <div className="absolute inset-0 bg-black/50 backdrop-blur-[2px]"></div>
         </div>
-        <div className="relative z-10 text-center text-white space-y-8 px-4">
-          <h2 className="text-5xl md:text-6xl font-bold">Together, We Can Create Change</h2>
-          <div className="flex gap-4 justify-center flex-wrap">
-            <button className="bg-[#E86B2C] hover:bg-[#D15A1E] text-white px-10 py-4 rounded-xl font-bold transition text-lg">
+        <div className="relative z-10 text-center text-white space-y-12 px-4 max-w-4xl">
+          <h2 className="text-6xl md:text-7xl font-bold leading-tight">Together, We Can Create Change</h2>
+          <div className="flex gap-6 justify-center flex-wrap">
+            <button className="bg-[#ff5f00] hover:bg-[#e65500] text-white px-12 py-5 rounded-2xl font-bold transition-all text-xl shadow-2xl shadow-orange-900/40 transform hover:-translate-y-1">
               Join our Community
             </button>
-            <button className="bg-white hover:bg-gray-100 text-gray-900 px-10 py-4 rounded-xl font-bold transition text-lg">
+            <button className="bg-white hover:bg-gray-100 text-gray-900 px-12 py-5 rounded-2xl font-bold transition-all text-xl shadow-2xl transform hover:-translate-y-1">
               Donate
             </button>
           </div>
@@ -169,75 +169,75 @@ export const Services = (): JSX.Element => {
       </section>
 
       {/* Footer */}
-      <footer className="bg-white pt-20 pb-10 px-4 md:px-8 lg:px-16 border-t border-gray-100">
+      <footer className="bg-white pt-32 pb-12 px-4 md:px-8 lg:px-16 border-t border-gray-100">
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 mb-20">
-            <div className="lg:col-span-2 space-y-6">
-              <div className="flex items-center gap-3">
-                <img src="/figmaAssets/image-1.png" alt="ASSLS Logo" className="h-14" />
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-16 mb-24">
+            <div className="lg:col-span-2 space-y-10">
+              <div className="flex items-center gap-5">
+                <img src="/figmaAssets/image-1.png" alt="ASSLS Logo" className="h-20" />
                 <div>
-                  <h4 className="font-bold text-xl text-[#2B3674]">ASSLS</h4>
-                  <p className="text-[#05CD99] text-xs font-medium uppercase tracking-wider">A Hope For Better Lives</p>
+                  <h4 className="font-bold text-3xl text-[#111111] tracking-tighter leading-none">ASSLS</h4>
+                  <p className="text-[#05CD99] text-xs font-black uppercase tracking-[0.2em] mt-1">A Hope For Better Lives</p>
                 </div>
               </div>
-              <div className="space-y-4 max-w-sm">
-                <p className="text-gray-600 font-medium">Updates right to your Inbox</p>
-                <div className="flex gap-2">
-                  <input type="email" placeholder="Email Address" className="flex-1 bg-gray-50 border-0 rounded-xl px-4 py-3 text-sm focus:ring-2 focus:ring-[#E86B2C]" />
-                  <button className="bg-[#E86B2C] text-white px-8 py-3 rounded-xl font-bold hover:bg-[#D15A1E] transition">Send</button>
+              <div className="space-y-6 max-w-md">
+                <p className="text-gray-600 font-bold text-lg">Updates right to your Inbox</p>
+                <div className="flex gap-3">
+                  <input type="email" placeholder="Email Address" className="flex-1 bg-gray-50 border-2 border-gray-100 rounded-2xl px-6 py-4 text-lg focus:ring-4 focus:ring-orange-100 focus:border-[#ff5f00] transition-all outline-none" />
+                  <button className="bg-[#ff5f00] text-white px-10 py-4 rounded-2xl font-bold hover:bg-[#e65500] transition-all shadow-xl shadow-orange-100">Send</button>
                 </div>
               </div>
             </div>
 
-            <div className="space-y-6">
-              <h4 className="font-bold text-[#2B3674]">Details</h4>
-              <ul className="space-y-4 text-gray-500 font-medium">
-                <li><a href="#" className="hover:text-[#E86B2C] transition">Location</a></li>
-                <li><a href="#" className="hover:text-[#E86B2C] transition">Contact</a></li>
+            <div className="space-y-8">
+              <h4 className="font-bold text-xl text-[#111111] uppercase tracking-widest">Details</h4>
+              <ul className="space-y-5 text-gray-500 font-bold text-lg">
+                <li><a href="#" className="hover:text-[#ff5f00] transition-colors">Location</a></li>
+                <li><a href="#" className="hover:text-[#ff5f00] transition-colors">Contact</a></li>
               </ul>
             </div>
 
-            <div className="space-y-6">
-              <h4 className="font-bold text-[#2B3674]">Links</h4>
-              <ul className="space-y-4 text-gray-500 font-medium">
-                <li><a href="/" className="hover:text-[#E86B2C] transition">Home</a></li>
-                <li><a href="/about" className="hover:text-[#E86B2C] transition">About</a></li>
-                <li><a href="/services" className="hover:text-[#E86B2C] transition">Services</a></li>
-                <li><a href="#" className="hover:text-[#E86B2C] transition">Blog</a></li>
+            <div className="space-y-8">
+              <h4 className="font-bold text-xl text-[#111111] uppercase tracking-widest">Links</h4>
+              <ul className="space-y-5 text-gray-500 font-bold text-lg">
+                <li><a href="/" className="hover:text-[#ff5f00] transition-colors">Home</a></li>
+                <li><a href="/about" className="hover:text-[#ff5f00] transition-colors">About</a></li>
+                <li><a href="/services" className="hover:text-[#ff5f00] transition-colors">Services</a></li>
+                <li><a href="#" className="hover:text-[#ff5f00] transition-colors">Blog</a></li>
               </ul>
             </div>
 
-            <div className="space-y-6">
-              <h4 className="font-bold text-[#2B3674]">ASSLS</h4>
-              <ul className="space-y-4 text-gray-500 font-medium">
-                <li><a href="#" className="hover:text-[#E86B2C] transition">Gallery</a></li>
-                <li><a href="#" className="hover:text-[#E86B2C] transition">Donate</a></li>
-                <li><a href="#" className="hover:text-[#E86B2C] transition">Community</a></li>
+            <div className="space-y-8">
+              <h4 className="font-bold text-xl text-[#111111] uppercase tracking-widest">ASSLS</h4>
+              <ul className="space-y-5 text-gray-500 font-bold text-lg">
+                <li><a href="#" className="hover:text-[#ff5f00] transition-colors">Gallery</a></li>
+                <li><a href="#" className="hover:text-[#ff5f00] transition-colors">Donate</a></li>
+                <li><a href="#" className="hover:text-[#ff5f00] transition-colors">Community</a></li>
               </ul>
-              <div className="pt-4 flex flex-col items-center gap-2">
-                <div className="p-2 border border-gray-100 rounded-2xl shadow-sm">
-                  <img src="/figmaAssets/placeholder---image-2.png" alt="QR Code" className="w-24 h-24" />
+              <div className="pt-8 flex flex-col items-center gap-4">
+                <div className="p-4 border-2 border-gray-50 rounded-[32px] shadow-2xl">
+                  <img src="/figmaAssets/bi-qr-code.svg" alt="QR Code" className="w-28 h-28" />
                 </div>
-                <span className="text-xs font-bold text-gray-400 uppercase tracking-widest">Scan to donate</span>
+                <span className="text-xs font-black text-gray-300 uppercase tracking-[0.3em]">Scan to donate</span>
               </div>
             </div>
           </div>
 
-          <div className="flex flex-col md:flex-row justify-between items-center pt-10 border-t border-gray-50 gap-6">
-            <div className="flex items-center gap-6 text-sm font-bold text-gray-400">
+          <div className="flex flex-col md:flex-row justify-between items-center pt-12 border-t border-gray-50 gap-8">
+            <div className="flex items-center gap-10 text-sm font-black text-gray-300 uppercase tracking-widest">
               <span>© ASSLS 2025</span>
-              <a href="#" className="hover:text-gray-600 transition">Privacy policy</a>
-              <a href="#" className="hover:text-gray-600 transition">Refund Policy</a>
+              <a href="#" className="hover:text-gray-600 transition-colors">Privacy policy</a>
+              <a href="#" className="hover:text-gray-600 transition-colors">Refund Policy</a>
             </div>
-            <div className="flex gap-6">
-              <a href="#" className="w-10 h-10 rounded-full bg-gray-50 flex items-center justify-center hover:bg-red-50 transition group">
-                <img src="/figmaAssets/image-5.png" alt="YouTube" className="w-5 h-5 opacity-60 group-hover:opacity-100 transition" />
+            <div className="flex gap-8">
+              <a href="#" className="w-14 h-14 rounded-2xl bg-gray-50 flex items-center justify-center hover:bg-red-50 transition-all group shadow-sm hover:shadow-md">
+                <img src="/figmaAssets/image-5.png" alt="YouTube" className="w-7 h-7 opacity-40 group-hover:opacity-100 transition-opacity" />
               </a>
-              <a href="#" className="w-10 h-10 rounded-full bg-gray-50 flex items-center justify-center hover:bg-pink-50 transition group">
-                <img src="/figmaAssets/image-6.png" alt="Instagram" className="w-5 h-5 opacity-60 group-hover:opacity-100 transition" />
+              <a href="#" className="w-14 h-14 rounded-2xl bg-gray-50 flex items-center justify-center hover:bg-pink-50 transition-all group shadow-sm hover:shadow-md">
+                <img src="/figmaAssets/image-6.png" alt="Instagram" className="w-7 h-7 opacity-40 group-hover:opacity-100 transition-opacity" />
               </a>
-              <a href="#" className="w-10 h-10 rounded-full bg-gray-50 flex items-center justify-center hover:bg-blue-50 transition group">
-                <img src="/figmaAssets/image-7.png" alt="Facebook" className="w-5 h-5 opacity-60 group-hover:opacity-100 transition" />
+              <a href="#" className="w-14 h-14 rounded-2xl bg-gray-50 flex items-center justify-center hover:bg-blue-50 transition-all group shadow-sm hover:shadow-md">
+                <img src="/figmaAssets/image-7.png" alt="Facebook" className="w-7 h-7 opacity-40 group-hover:opacity-100 transition-opacity" />
               </a>
             </div>
           </div>
