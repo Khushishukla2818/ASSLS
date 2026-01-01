@@ -1,315 +1,248 @@
 export const Services = (): JSX.Element => {
   const services = [
     {
-      id: 1,
-      title: "Farmer Welfare & Sustainable Agriculture",
-      description: "Supporting farmers through training, innovation, and awareness programs to improve agricultural practices, income stability, and climate resilience.",
-      icon: "🌾"
+      title: "Agriculture & Farmer Welfare",
+      description: "ASSLS is deeply committed to revitalizing the agricultural sector by accelerating a just evolution toward climate-positive farming. Our initiatives focus on farmer innovations, the integration of sustainable practices that help local communities transition through economic shifts and climate resilience. We act as a bridge between traditional wisdom and modern solutions, providing essential inputs for natural resource management and promoting the rights of agriculturists under the Development and Rights to Agriculture Act.\n\nBy working with those impacted by adverse climate change, we implement equitable solutions that ensure farmers have ownership over their resources. Our goal is to create an elevated agricultural economy that sustainably serves all people while closing representation gaps. Through collective effort, we strive to transform agriculture into a wealth-generating sector for the local communities of Andhra Pradesh and Telangana.",
+      image: "/figmaAssets/rectangle-5.png",
+      imagePosition: "right"
     },
     {
-      id: 2,
-      title: "Health Care & Medical Support",
-      description: "Organizing medical camps, eye care programs, nutrition awareness, and health education to improve access to quality healthcare in rural communities.",
-      icon: "⚕️"
+      title: "Women Empowerment",
+      description: "Women are the backbone of community resilience, and ASSLS prioritizes their empowerment through multi-dimensional support systems. Our programs are designed to improve women's participation in natural resource management and decision-making processes at the village level. We provide vocational training and capacity-building capsules that enable destitute women and female heads of households to achieve financial independence. By focusing on skill development, we help women transition from vulnerable circumstances to becoming influential change agents within their local networks.\n\nWe also conduct specific awareness programs on family sustenance, legal rights, and health consciousness to ensure holistic upliftment. Our vision is a society where women have a seat and a voice at every table, free from wage gaps and social limitations. Through continuous motivation and integrated actions, we ensure that women are leading the way toward a more just and fertile world.",
+      image: "/figmaAssets/rectangle-6.png",
+      imagePosition: "left"
     },
     {
-      id: 3,
-      title: "Livelihood Promotion & Income Generation",
-      description: "Supporting self-sustaining ventures through skill training, employment generation, and livelihood development programs for vulnerable groups.",
-      icon: "💼"
+      title: "Youth & Skill Development",
+      description: "The ADUKONDAMU S/ST LABOR SOCIETY recognizes youth as the primary change agents for a responsive democracy. We offer specialized vocational training and educational capsules designed to engage adolescents in distress, particularly those from historically neglected communities. By providing skills in modern technology and self-sustaining ventures, we reduce the risk of poverty and migration among the younger generation. Our programs focus on transforming energy and potential into tangible livelihoods through employment and income-generation training. We work closely with partners like STEP and local institutions to provide certification and professional pathways for school dropouts and marginalized youth.\n\nBy fostering an environment of excellence and persistence, we empower young people to break the cycle of poverty and lead community development. We believe that investing in youth skills is a 'big bet' that will yield significant progress for the future of our society.",
+      image: "/figmaAssets/rectangle-7.png",
+      imagePosition: "right"
     },
     {
-      id: 4,
-      title: "Women Empowerment & Skill Development",
-      description: "Empowering women through vocational training, livelihood programs, and capacity-building initiatives that promote financial independence and social equality.",
-      icon: "👩"
+      title: "Healthcare & Medical Support",
+      description: "Our healthcare initiatives are built on the principle that quality medical care is a fundamental right, not a privilege. ASSLS organizes comprehensive medical and eye care camps, offering operations and treatments to those in remote areas who lack access to standard facilities. We place a high priority on Reproductive and Child Health (RCH) and provide critical health information to vulnerable segments to build resilience against epidemics. Our team works tirelessly to bridge the gap between rural masses and essential health services through linkages with ICDS and state health commissions.\n\nBy hosting awareness sessions on cancer understanding and general hygiene, we promote a culture of health consciousness and preventive care. We also provide specialized support for the elderly and adolescents, ensuring that every age group receives the medical attention they deserve. Our medical outreach is a vital catalyst for improving the overall quality of life in the Prakasam district and surrounding regions.",
+      image: "/figmaAssets/rectangle-8.png",
+      imagePosition: "left"
     },
     {
-      id: 5,
-      title: "Community Awareness & Social Rights",
-      description: "Creating awareness on sanitation, hygiene, drinking water, government schemes, and social rights through community-based education and engagement.",
-      icon: "🤝"
+      title: "Education & Child Development",
+      description: "Education is the cornerstone of the ASSLS mission to build community power and foster equitable futures. We focus on providing care, support, and rehabilitation to children and adolescents, with a special emphasis on those from disadvantaged backgrounds. Our programs include educational instincts for school dropouts and never-enrolled children, ensuring they are integrated back into the learning system. We advocate for child rights protection and work collaboratively with parents to build capacity regarding laws that safeguard the younger generation.\n\nBy fostering literacy and education through motivation, we prepare children to become the next generation of effective leaders and influencers. Our commitment extends to providing materialization of entitlements, ensuring that every child has the resources needed to succeed academically. We believe that by protecting the child segment today, we are securing a peaceful and just world for the future.",
+      image: "/figmaAssets/rectangle-22587.png",
+      imagePosition: "right"
     },
     {
-      id: 6,
+      title: "Nutrition & Food Security",
+      description: "ASSLS addresses the critical challenge of malnutrition through sustainable nutrition enrichment and supplementation programs. We understand that food security is the foundation of community health, which is why we provide targeted nutritional support to children, pregnant women, and the elderly. Our team works on the frontlines to educate families on government nutrition schemes and the importance of a balanced diet for long-term health. By partnering with ICDS and local self-government wings, we ensure that the most vulnerable segments of society receive their essential food entitlements. We also promote the cultivation of indigenous crops and kitchen gardens to foster local food sovereignty and resilience.\n\nOur research studies on livelihood patterns help us identify and mitigate poverty risks that lead to food insecurity. Ultimately, we strive to create a system where every household has access to the nutrition required to lead a productive and joyful life.",
+      image: "/figmaAssets/rectangle-22588.png",
+      imagePosition: "left"
+    },
+    {
       title: "HIV/AIDS Prevention, Care & Support",
-      description: "Conducting awareness programs, community outreach, counseling, and rehabilitation support for HIV-affected and at-risk populations.",
-      icon: "❤️"
+      description: "The organization has established a credible presence in the fight against HIV/AIDS, focusing on prevention, outreach, and community mobilization. We provide a compassionate support system for those infected and affected by the virus, offering a \"boon\" of information and resilience during difficult times. Our activities include organizing awareness programs to reduce stigma and educating the public on prevention strategies to stop the spread of the epidemic. We work in partnership with village elders and government functionaries to provide comprehensive care and rehabilitation for families facing the tragedy of HIV/AIDS.\n\nThrough our RCH initiatives and medical camps, we ensure that the physical health of patients is monitored alongside their social well-being. By building a supportive and non-discriminatory environment, we help individuals live with dignity and hope. Our work in this sector has been instrumental in policy advocacy and protecting the rights of vulnerable health segments.",
+      image: "/figmaAssets/rectangle-22589.png",
+      imagePosition: "right"
     },
     {
-      id: 7,
-      title: "Youth & Adolescent Development",
-      description: "Providing education support, life skills training, and awareness programs to help adolescents and youth build confidence, knowledge, and future opportunities.",
-      icon: "🎓"
+      title: "Environmental Protection & Biodiversity Conservation",
+      description: "At the heart of our mission is the restoration of biodiversity and the preservation of our natural heritage for a climate-positive future. ASSLS works closely with the AP Bio-Diversity Board and the Ministry of Environment to protect forest ecosystems and village habitats. We promote the preservation of indigenous practices that have historically sustained our local flora and fauna. Our programs focus on reducing carbon waste and promoting clean energy initiatives that lower the energy burden on moderate-income households.\n\nThrough community awareness and large-scale plantation drives, we strive to create a greener and more fertile environment for all. We believe that a healthy ecosystem is essential for sustainable agriculture and the overall well-being of the planet. By involving local communities in natural resource management, we ensure that environmental protection is a collective and lasting effort.",
+      image: "/figmaAssets/rectangle-22590.png",
+      imagePosition: "left"
     },
     {
-      id: 8,
-      title: "Environmental Protection & Biodiversity",
-      description: "Promoting plantation drives, biodiversity conservation, ecosystem restoration, and environmental awareness to protect natural resources and village habitats.",
-      icon: "🌱"
+      title: "Livelihood Promotion & Income Generation",
+      description: "ASSLS strives to generate wealth, work, and savings for all communities by promoting diverse and self-sustaining livelihood models. We focus on building the capacity of farmers, youth, and women to engage in income-generating activities that reduce economic vulnerability. Our approach includes training in the collection, processing, storage, and marketing of village resources to improve local revenues. By creating linkages with NABARD, local banks, and micro-insurance providers, we ensure that small-scale entrepreneurs have the capital they need to grow.\n\nWe provide vocational training tailored to the market's needs, ensuring that our beneficiaries are equipped for modern economic transitions. Our goal is to eliminate representation and wage gaps by fostering an inclusive economy that serves the marginalized. Through these efforts, we are turning service into a catalyst for long-term economic independence and community prosperity.",
+      image: "/figmaAssets/rectangle-22591.png",
+      imagePosition: "right"
     },
     {
-      id: 9,
-      title: "Research, Training & Policy Advocacy",
-      description: "Conducting research studies, training programs, and policy advocacy to address issues related to agriculture, livelihoods, and community development.",
-      icon: "📊"
-    },
-    {
-      id: 10,
-      title: "Community Mobilization & Capacity Building",
-      description: "Strengthening community institutions, volunteers, and local leadership through training, collaboration, and participatory development approaches.",
-      icon: "👥"
+      title: "Social Justice & Rights Awareness",
+      description: "The core mission of ASSLS is to speed up a just evolution toward a more equitable and inclusive society. We actively work to protect the rights of the old aged, adolescents, farmers, and S/ST communities through legal advocacy and social reform. Our leadership has historically served in influential roles, such as the SC/ST Vigilance and Monitoring Committee and the Right to Food case in the Supreme Court. We strive to inculcate social, economic, and cultural fraternity, ensuring that everyone has a seat and a voice at the table.\n\nBy creating awareness about entitlements and fighting against historical neglect, we empower the vulnerable to claim their rightful place in democracy. Our values of integrity and equity guide every decision as we work to dismantle systems of inequality. We are committed to building a world where justice is accessible to all, regardless of their background or economic status.",
+      image: "/figmaAssets/rectangle-22592.png",
+      imagePosition: "left"
     }
   ];
 
   return (
-    <div className="w-full bg-white">
+    <div className="w-full bg-white font-sans">
       {/* Header */}
-      <header className="sticky top-0 z-50 bg-white shadow-md">
+      <header className="sticky top-0 z-50 bg-white shadow-sm">
         <div className="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
           <img src="/figmaAssets/image-1.png" alt="ASSLS Logo" className="h-16" />
           <nav className="flex gap-8">
-            <a href="/" className="text-gray-700 hover:text-orange-500">Home</a>
-            <a href="/about" className="text-gray-700 hover:text-orange-500">About us</a>
-            <a href="/services" className="text-orange-500 font-medium border-b-4 border-orange-500 pb-2">Services</a>
-            <a href="/" className="text-gray-700 hover:text-orange-500">Contact us</a>
+            <a href="/" className="text-gray-700 hover:text-orange-500 font-medium">Home</a>
+            <a href="/about" className="text-gray-700 hover:text-orange-500 font-medium">About us</a>
+            <a href="/services" className="text-orange-500 font-bold border-b-2 border-orange-500 pb-1">Services</a>
+            <a href="/contact" className="text-gray-700 hover:text-orange-500 font-medium">Contact us</a>
           </nav>
-          <button className="border-2 border-orange-500 text-orange-500 px-4 py-2 rounded-lg font-medium">Donate</button>
+          <button className="border-2 border-orange-500 text-orange-500 px-6 py-2 rounded-lg font-bold hover:bg-orange-50 transition">Donate</button>
         </div>
       </header>
 
       {/* Hero Section */}
-      <section className="relative py-20 px-4 md:px-8 lg:px-16 bg-gradient-to-r from-orange-50 to-orange-100">
+      <section className="bg-[#6094BD] text-white py-16 px-4 md:px-8 lg:px-16">
         <div className="max-w-7xl mx-auto">
-          <h1 className="text-6xl font-bold mb-6 text-gray-900">Our Services</h1>
-          <p className="text-2xl text-gray-700 max-w-3xl">
-            ASSLS offers a comprehensive range of services designed to empower communities and create lasting positive change through innovative programs and community partnerships.
+          <h1 className="text-5xl md:text-6xl font-serif mb-6 text-center leading-tight font-medium">
+            Supporting Communities Through<br />Meaningful and Sustainable Services
+          </h1>
+          <p className="text-center text-lg mb-12 max-w-4xl mx-auto font-light">
+            We deliver community-driven programs that support livelihoods, health, education, and social well-being.<br />
+            Each service is focused on creating sustainable and long-term impact at the grassroots level.
           </p>
+          
+          {/* Hero Images Scroll/Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-8">
+            <div className="rounded-2xl overflow-hidden h-60">
+              <img src="/figmaAssets/rectangle-1.png" alt="Activity 1" className="w-full h-full object-cover" />
+            </div>
+            <div className="rounded-2xl overflow-hidden h-60">
+              <img src="/figmaAssets/rectangle-2.png" alt="Activity 2" className="w-full h-full object-cover" />
+            </div>
+            <div className="rounded-2xl overflow-hidden h-60">
+              <img src="/figmaAssets/rectangle-3.png" alt="Activity 3" className="w-full h-full object-cover" />
+            </div>
+            <div className="rounded-2xl overflow-hidden h-60">
+              <img src="/figmaAssets/rectangle-4.png" alt="Activity 4" className="w-full h-full object-cover" />
+            </div>
+          </div>
+
+          <div className="flex items-center gap-2 justify-start cursor-pointer group">
+            <div className="w-6 h-6 rounded-full border border-white flex items-center justify-center group-hover:bg-white group-hover:text-[#6094BD] transition">
+              <span className="text-[10px] ml-0.5">▶</span>
+            </div>
+            <span className="text-sm font-medium">Watch our videos</span>
+          </div>
         </div>
       </section>
 
-      {/* Services Overview */}
-      <section className="py-20 px-4 md:px-8 lg:px-16">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl font-bold text-center mb-4 text-gray-900">Comprehensive Development Programs</h2>
-          <p className="text-center text-gray-600 mb-16 text-lg max-w-2xl mx-auto">
-            We deliver targeted interventions across multiple sectors to address the complex needs of rural and vulnerable communities.
-          </p>
+      {/* Services Section */}
+      <section className="py-16 px-4 md:px-8 lg:px-16 max-w-7xl mx-auto relative">
+        <div className="flex items-center justify-between mb-12">
+          <h2 className="text-[#E86B2C] text-2xl font-bold">Our Services</h2>
+          <div className="fixed right-8 top-1/2 -translate-y-1/2 z-50 flex flex-col items-center gap-2">
+            <div className="bg-white p-2 rounded-full shadow-xl cursor-pointer hover:scale-110 transition">
+              <img src="/figmaAssets/logos-whatsapp-icon.svg" alt="WhatsApp" className="w-12 h-12" />
+            </div>
+            <span className="bg-white px-3 py-1 rounded-full shadow-md text-xs font-bold text-gray-700">Chat with us</span>
+          </div>
+        </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {services.map((service) => (
-              <div
-                key={service.id}
-                className="group bg-white border border-gray-200 rounded-xl p-8 shadow-sm hover:shadow-lg hover:border-orange-300 transition-all duration-300"
-              >
-                <div className="text-5xl mb-4 transform group-hover:scale-110 transition-transform duration-300">
-                  {service.icon}
+        {/* Services List */}
+        <div className="space-y-32">
+          {services.map((service, idx) => (
+            <div key={idx} className="space-y-8">
+              <h3 className="text-4xl font-bold text-[#333333]">{service.title}</h3>
+              
+              <div className={`flex flex-col ${service.imagePosition === 'right' ? 'lg:flex-row' : 'lg:flex-row-reverse'} gap-12 items-start`}>
+                <div className="flex-1 space-y-6">
+                  {service.description.split('\n\n').map((p, i) => (
+                    <p key={i} className="text-gray-700 leading-relaxed text-lg font-light">
+                      {p}
+                    </p>
+                  ))}
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4 group-hover:text-orange-600 transition-colors">
-                  {service.title}
-                </h3>
-                <p className="text-gray-700 leading-relaxed">
-                  {service.description}
-                </p>
+                <div className="lg:w-[45%] w-full rounded-2xl overflow-hidden shadow-sm">
+                  <img src={service.image} alt={service.title} className="w-full aspect-[4/3] object-cover" />
+                </div>
               </div>
-            ))}
-          </div>
+            </div>
+          ))}
         </div>
       </section>
 
-      {/* Why Choose Us Section */}
-      <section className="py-20 px-4 md:px-8 lg:px-16 bg-gray-50">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl font-bold text-center mb-12 text-gray-900">Why Choose ASSLS</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="text-center">
-              <div className="bg-orange-100 rounded-full w-24 h-24 flex items-center justify-center mx-auto mb-4">
-                <span className="text-4xl font-bold text-orange-600">20+</span>
-              </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-2">Years of Experience</h3>
-              <p className="text-gray-700">Established in 2005 with proven track record in community development</p>
-            </div>
-
-            <div className="text-center">
-              <div className="bg-orange-100 rounded-full w-24 h-24 flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl font-bold text-orange-600">10+</span>
-              </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-2">Service Areas</h3>
-              <p className="text-gray-700">Comprehensive programs addressing multiple community needs</p>
-            </div>
-
-            <div className="text-center">
-              <div className="bg-orange-100 rounded-full w-24 h-24 flex items-center justify-center mx-auto mb-4">
-                <span className="text-3xl font-bold text-orange-600">100K+</span>
-              </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-2">Lives Impacted</h3>
-              <p className="text-gray-700">Thousands of families benefited from our programs</p>
-            </div>
-
-            <div className="text-center">
-              <div className="bg-orange-100 rounded-full w-24 h-24 flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl font-bold text-orange-600">3 Certs</span>
-              </div>
-              <h3 className="text-2xl font-bold text-gray-900 mb-2">Certified Partner</h3>
-              <p className="text-gray-700">12A, 80G, and FCRA certified organization</p>
-            </div>
-          </div>
+      {/* CTA Section */}
+      <section className="mt-20 relative h-[500px] flex items-center justify-center">
+        <div className="absolute inset-0 z-0">
+          <img src="/figmaAssets/placeholder---image.png" alt="Community" className="w-full h-full object-cover" />
+          <div className="absolute inset-0 bg-black/40"></div>
         </div>
-      </section>
-
-      {/* Key Focus Areas */}
-      <section className="py-20 px-4 md:px-8 lg:px-16">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-4xl font-bold text-center mb-12 text-gray-900">Our Key Focus Areas</h2>
-
-          <div className="space-y-16">
-            {/* Agricultural Development */}
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-              <div>
-                <h3 className="text-3xl font-bold text-gray-900 mb-4">Agricultural Development</h3>
-                <p className="text-lg text-gray-700 mb-4">
-                  We support farmer communities with modern agricultural practices, sustainable farming techniques, and market linkages to ensure income stability and food security.
-                </p>
-                <ul className="space-y-2 text-gray-700">
-                  <li className="flex items-start gap-3">
-                    <span className="text-orange-500 font-bold text-xl">✓</span>
-                    <span>Farmer training and capacity building</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <span className="text-orange-500 font-bold text-xl">✓</span>
-                    <span>Climate-smart agriculture promotion</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <span className="text-orange-500 font-bold text-xl">✓</span>
-                    <span>Market linkages and value addition</span>
-                  </li>
-                </ul>
-              </div>
-              <div className="bg-gray-300 h-80 rounded-lg"></div>
-            </div>
-
-            {/* Health & Wellness */}
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-              <div className="bg-gray-300 h-80 rounded-lg"></div>
-              <div>
-                <h3 className="text-3xl font-bold text-gray-900 mb-4">Health & Wellness</h3>
-                <p className="text-lg text-gray-700 mb-4">
-                  Healthcare remains a fundamental right. We organize medical camps, health awareness programs, and nutrition initiatives to improve community health outcomes.
-                </p>
-                <ul className="space-y-2 text-gray-700">
-                  <li className="flex items-start gap-3">
-                    <span className="text-orange-500 font-bold text-xl">✓</span>
-                    <span>Medical camps and health screenings</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <span className="text-orange-500 font-bold text-xl">✓</span>
-                    <span>Nutrition and health awareness</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <span className="text-orange-500 font-bold text-xl">✓</span>
-                    <span>HIV/AIDS prevention programs</span>
-                  </li>
-                </ul>
-              </div>
-            </div>
-
-            {/* Women & Youth Empowerment */}
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-              <div>
-                <h3 className="text-3xl font-bold text-gray-900 mb-4">Women & Youth Empowerment</h3>
-                <p className="text-lg text-gray-700 mb-4">
-                  We believe in unlocking the potential of women and youth through skill development, education, and creating equal opportunities for economic participation.
-                </p>
-                <ul className="space-y-2 text-gray-700">
-                  <li className="flex items-start gap-3">
-                    <span className="text-orange-500 font-bold text-xl">✓</span>
-                    <span>Vocational skills training programs</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <span className="text-orange-500 font-bold text-xl">✓</span>
-                    <span>Life skills and education support</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <span className="text-orange-500 font-bold text-xl">✓</span>
-                    <span>Economic empowerment initiatives</span>
-                  </li>
-                </ul>
-              </div>
-              <div className="bg-gray-300 h-80 rounded-lg"></div>
-            </div>
-
-            {/* Environmental Conservation */}
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-              <div className="bg-gray-300 h-80 rounded-lg"></div>
-              <div>
-                <h3 className="text-3xl font-bold text-gray-900 mb-4">Environmental Conservation</h3>
-                <p className="text-lg text-gray-700 mb-4">
-                  Protecting our environment is crucial for sustainable development. We implement conservation programs and promote ecological awareness in communities.
-                </p>
-                <ul className="space-y-2 text-gray-700">
-                  <li className="flex items-start gap-3">
-                    <span className="text-orange-500 font-bold text-xl">✓</span>
-                    <span>Afforestation and plantation drives</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <span className="text-orange-500 font-bold text-xl">✓</span>
-                    <span>Biodiversity conservation projects</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <span className="text-orange-500 font-bold text-xl">✓</span>
-                    <span>Environmental awareness campaigns</span>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Call to Action */}
-      <section className="py-20 px-4 md:px-8 lg:px-16 bg-orange-50">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl font-bold text-gray-900 mb-6">Ready to Make a Difference?</h2>
-          <p className="text-xl text-gray-700 mb-8">
-            Join us in our mission to create equitable and sustainable communities. Your support enables us to expand our services and reach more lives.
-          </p>
-          <div className="flex gap-4 justify-center">
-            <button className="bg-orange-500 text-white px-8 py-3 rounded-lg font-medium text-lg hover:bg-orange-600 transition">
-              Partner With Us
+        <div className="relative z-10 text-center text-white space-y-8 px-4">
+          <h2 className="text-5xl md:text-6xl font-bold">Together, We Can Create Change</h2>
+          <div className="flex gap-4 justify-center flex-wrap">
+            <button className="bg-[#E86B2C] hover:bg-[#D15A1E] text-white px-10 py-4 rounded-xl font-bold transition text-lg">
+              Join our Community
             </button>
-            <button className="border-2 border-orange-500 text-orange-500 px-8 py-3 rounded-lg font-medium text-lg hover:bg-orange-50 transition">
-              Donate Now
+            <button className="bg-white hover:bg-gray-100 text-gray-900 px-10 py-4 rounded-xl font-bold transition text-lg">
+              Donate
             </button>
           </div>
         </div>
       </section>
 
       {/* Footer */}
-      <footer className="bg-white mt-16 py-12 px-4 md:px-8 lg:px-16 border-t">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div>
-            <h3 className="font-semibold text-black mb-4">Newsletter</h3>
-            <p className="text-gray-700 mb-4">Updates right to your Inbox</p>
-            <div className="flex gap-2">
-              <input type="email" placeholder="Email Address" className="flex-1 px-4 py-2 border border-gray-300 rounded-lg" />
-              <button className="bg-orange-500 text-white px-6 py-2 rounded-lg font-medium">Send</button>
+      <footer className="bg-white pt-20 pb-10 px-4 md:px-8 lg:px-16 border-t border-gray-100">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 mb-20">
+            <div className="lg:col-span-2 space-y-6">
+              <div className="flex items-center gap-3">
+                <img src="/figmaAssets/image-1.png" alt="ASSLS Logo" className="h-14" />
+                <div>
+                  <h4 className="font-bold text-xl text-[#2B3674]">ASSLS</h4>
+                  <p className="text-[#05CD99] text-xs font-medium uppercase tracking-wider">A Hope For Better Lives</p>
+                </div>
+              </div>
+              <div className="space-y-4 max-w-sm">
+                <p className="text-gray-600 font-medium">Updates right to your Inbox</p>
+                <div className="flex gap-2">
+                  <input type="email" placeholder="Email Address" className="flex-1 bg-gray-50 border-0 rounded-xl px-4 py-3 text-sm focus:ring-2 focus:ring-[#E86B2C]" />
+                  <button className="bg-[#E86B2C] text-white px-8 py-3 rounded-xl font-bold hover:bg-[#D15A1E] transition">Send</button>
+                </div>
+              </div>
+            </div>
+
+            <div className="space-y-6">
+              <h4 className="font-bold text-[#2B3674]">Details</h4>
+              <ul className="space-y-4 text-gray-500 font-medium">
+                <li><a href="#" className="hover:text-[#E86B2C] transition">Location</a></li>
+                <li><a href="#" className="hover:text-[#E86B2C] transition">Contact</a></li>
+              </ul>
+            </div>
+
+            <div className="space-y-6">
+              <h4 className="font-bold text-[#2B3674]">Links</h4>
+              <ul className="space-y-4 text-gray-500 font-medium">
+                <li><a href="/" className="hover:text-[#E86B2C] transition">Home</a></li>
+                <li><a href="/about" className="hover:text-[#E86B2C] transition">About</a></li>
+                <li><a href="/services" className="hover:text-[#E86B2C] transition">Services</a></li>
+                <li><a href="#" className="hover:text-[#E86B2C] transition">Blog</a></li>
+              </ul>
+            </div>
+
+            <div className="space-y-6">
+              <h4 className="font-bold text-[#2B3674]">ASSLS</h4>
+              <ul className="space-y-4 text-gray-500 font-medium">
+                <li><a href="#" className="hover:text-[#E86B2C] transition">Gallery</a></li>
+                <li><a href="#" className="hover:text-[#E86B2C] transition">Donate</a></li>
+                <li><a href="#" className="hover:text-[#E86B2C] transition">Community</a></li>
+              </ul>
+              <div className="pt-4 flex flex-col items-center gap-2">
+                <div className="p-2 border border-gray-100 rounded-2xl shadow-sm">
+                  <img src="/figmaAssets/placeholder---image-2.png" alt="QR Code" className="w-24 h-24" />
+                </div>
+                <span className="text-xs font-bold text-gray-400 uppercase tracking-widest">Scan to donate</span>
+              </div>
             </div>
           </div>
-          <div className="flex gap-6">
-            <a href="/" className="text-gray-700 hover:text-orange-500">Privacy policy</a>
-            <a href="/" className="text-gray-700 hover:text-orange-500">Refund Policy</a>
-          </div>
-          <div className="text-right">
-            <p className="text-gray-700">© ASSLS 2025</p>
+
+          <div className="flex flex-col md:flex-row justify-between items-center pt-10 border-t border-gray-50 gap-6">
+            <div className="flex items-center gap-6 text-sm font-bold text-gray-400">
+              <span>© ASSLS 2025</span>
+              <a href="#" className="hover:text-gray-600 transition">Privacy policy</a>
+              <a href="#" className="hover:text-gray-600 transition">Refund Policy</a>
+            </div>
+            <div className="flex gap-6">
+              <a href="#" className="w-10 h-10 rounded-full bg-gray-50 flex items-center justify-center hover:bg-red-50 transition group">
+                <img src="/figmaAssets/image-5.png" alt="YouTube" className="w-5 h-5 opacity-60 group-hover:opacity-100 transition" />
+              </a>
+              <a href="#" className="w-10 h-10 rounded-full bg-gray-50 flex items-center justify-center hover:bg-pink-50 transition group">
+                <img src="/figmaAssets/image-6.png" alt="Instagram" className="w-5 h-5 opacity-60 group-hover:opacity-100 transition" />
+              </a>
+              <a href="#" className="w-10 h-10 rounded-full bg-gray-50 flex items-center justify-center hover:bg-blue-50 transition group">
+                <img src="/figmaAssets/image-7.png" alt="Facebook" className="w-5 h-5 opacity-60 group-hover:opacity-100 transition" />
+              </a>
+            </div>
           </div>
         </div>
       </footer>
-
-      {/* WhatsApp Button */}
-      <div className="fixed bottom-8 right-8 flex items-center gap-2">
-        <img src="/figmaAssets/logos-whatsapp-icon.svg" alt="WhatsApp" className="w-16 h-16" />
-        <div className="bg-white px-4 py-2 rounded-xl shadow-lg">Chat with us</div>
-      </div>
     </div>
   );
 };
