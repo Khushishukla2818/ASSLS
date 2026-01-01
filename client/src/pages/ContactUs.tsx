@@ -1,10 +1,15 @@
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import { SuccessModal } from "@/components/SuccessModal";
 
 export const ContactUs = (): JSX.Element => {
+  const [showSuccess, setShowSuccess] = useState(false);
+
   return (
     <div className="bg-[#ffffff] overflow-hidden w-full relative font-['Poppins',_Helvetica]">
+      <SuccessModal isOpen={showSuccess} onClose={() => setShowSuccess(false)} />
       {/* Top Info Bar */}
       <div className="w-full flex justify-center bg-white border-b border-[#e9ecef]">
         <div className="w-full max-w-[1512px] h-[45px] flex items-center justify-between px-[102px]">
@@ -112,7 +117,10 @@ export const ContactUs = (): JSX.Element => {
                 </div>
               </div>
             </div>
-            <Button className="w-full h-[65px] bg-[#ff5f00] hover:bg-[#ff5f00]/90 rounded-xl font-bold text-white text-base">
+            <Button 
+              onClick={() => setShowSuccess(true)}
+              className="w-full h-[65px] bg-[#ff5f00] hover:bg-[#ff5f00]/90 rounded-xl font-bold text-white text-base"
+            >
               Submit
             </Button>
           </div>

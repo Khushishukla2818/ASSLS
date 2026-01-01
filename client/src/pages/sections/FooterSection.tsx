@@ -1,9 +1,14 @@
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import { SuccessModal } from "@/components/SuccessModal";
 
 export const FooterSection = (): JSX.Element => {
+  const [showSuccess, setShowSuccess] = useState(false);
+
   return (
     <section className="w-full flex justify-center">
+      <SuccessModal isOpen={showSuccess} onClose={() => setShowSuccess(false)} />
       <div className="w-full flex">
         <div className="w-full flex">
           <div className="w-full h-[590px] relative overflow-hidden bg-[url(/figmaAssets/image-3-1.png)] bg-cover bg-[50%_50%]">
@@ -29,18 +34,21 @@ export const FooterSection = (): JSX.Element => {
               efforts are creating real change at the grassroots level
             </p>
 
-            <div className="absolute top-[409px] left-[98px] w-[433px] h-14 flex gap-2">
-              <div className="w-80 h-14 flex bg-neutral-50 rounded-lg overflow-hidden border border-solid border-[#e3e3e3]">
-                <Input
-                  className="w-full h-full border-0 bg-transparent [font-family:'Epilogue',Helvetica] font-normal text-[#939393] text-sm tracking-[0] leading-[14px]"
-                  placeholder="Input Email Address"
-                />
-              </div>
+              <div className="absolute top-[409px] left-[98px] w-[433px] h-14 flex gap-2">
+                <div className="w-80 h-14 flex bg-neutral-50 rounded-lg overflow-hidden border border-solid border-[#e3e3e3]">
+                  <Input
+                    className="w-full h-full border-0 bg-transparent [font-family:'Epilogue',Helvetica] font-normal text-[#939393] text-sm tracking-[0] leading-[14px]"
+                    placeholder="Input Email Address"
+                  />
+                </div>
 
-              <Button className="w-[105px] h-14 bg-[#ff5f00] rounded-lg hover:bg-[#ff5f00]/90 [font-family:'Epilogue',Helvetica] font-medium text-[#ffffff] text-base tracking-[0] leading-4">
-                Send
-              </Button>
-            </div>
+                <Button 
+                  onClick={() => setShowSuccess(true)}
+                  className="w-[105px] h-14 bg-[#ff5f00] rounded-lg hover:bg-[#ff5f00]/90 [font-family:'Epilogue',Helvetica] font-medium text-[#ffffff] text-base tracking-[0] leading-4"
+                >
+                  Send
+                </Button>
+              </div>
           </div>
         </div>
       </div>
