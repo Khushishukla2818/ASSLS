@@ -1,10 +1,10 @@
 import { Button } from "@/components/ui/button";
 
 const navigationLinks = [
-  { label: "Home", href: "/", active: true },
+  { label: "Home", href: "/", active: false },
   { label: "About us", href: "/about", active: false },
   { label: "Services", href: "/services", active: false },
-  { label: "Contact us", href: "/", active: false },
+  { label: "Contact us", href: "/contact", active: false },
 ];
 
 export const NavigationSection = (): JSX.Element => {

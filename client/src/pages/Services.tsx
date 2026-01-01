@@ -72,7 +72,7 @@ export const Services = (): JSX.Element => {
             <a href="/" className="text-gray-700 hover:text-orange-500 font-medium text-lg">Home</a>
             <a href="/about" className="text-gray-700 hover:text-orange-500 font-medium text-lg">About us</a>
             <a href="/services" className="text-[#ff5f00] font-bold border-b-4 border-[#ff5f00] pb-1 text-lg">Services</a>
-            <a href="/" className="text-gray-700 hover:text-orange-500 font-medium text-lg">Contact us</a>
+            <a href="/contact" className="text-gray-700 hover:text-orange-500 font-medium text-lg">Contact us</a>
           </nav>
           <button className="border-2 border-[#ff5f00] text-[#ff5f00] px-8 py-2 rounded-xl font-bold hover:bg-orange-50 transition text-lg">Donate</button>
         </div>
