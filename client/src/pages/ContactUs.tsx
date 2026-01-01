@@ -6,6 +6,14 @@ import { SuccessModal } from "@/components/SuccessModal";
 
 export const ContactUs = (): JSX.Element => {
   const [showSuccess, setShowSuccess] = useState(false);
+  const [formData, setFormData] = useState({ name: "", mobile: "", email: "", message: "" });
+
+  const handleSubmit = () => {
+    if (formData.name && formData.mobile && formData.email && formData.message) {
+      setShowSuccess(true);
+      setFormData({ name: "", mobile: "", email: "", message: "" });
+    }
+  };
 
   return (
     <div className="bg-[#ffffff] overflow-hidden w-full relative font-['Poppins',_Helvetica]">
@@ -95,19 +103,39 @@ export const ContactUs = (): JSX.Element => {
           <div className="flex-1 space-y-[33px] text-left">
             <div className="space-y-[15px]">
               <label className="font-medium text-[#111111] text-lg tracking-[0] leading-[normal]">Name</label>
-              <Input className="h-[65px] bg-white border border-[#e3e3e3] rounded-xl px-[25px] text-base" placeholder="Enter Your Name" />
+              <Input 
+                className="h-[65px] bg-white border border-[#e3e3e3] rounded-xl px-[25px] text-base" 
+                placeholder="Enter Your Name" 
+                value={formData.name}
+                onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+              />
             </div>
             <div className="space-y-[15px]">
               <label className="font-medium text-[#111111] text-lg tracking-[0] leading-[normal]">Mobile</label>
-              <Input className="h-[65px] bg-white border border-[#e3e3e3] rounded-xl px-[25px] text-base" placeholder="Enter Mobile Number" />
+              <Input 
+                className="h-[65px] bg-white border border-[#e3e3e3] rounded-xl px-[25px] text-base" 
+                placeholder="Enter Mobile Number" 
+                value={formData.mobile}
+                onChange={(e) => setFormData({ ...formData, mobile: e.target.value })}
+              />
             </div>
             <div className="space-y-[15px]">
               <label className="font-medium text-[#111111] text-lg tracking-[0] leading-[normal]">Email</label>
-              <Input className="h-[65px] bg-white border border-[#e3e3e3] rounded-xl px-[25px] text-base" placeholder="Enter E - Mail ID" />
+              <Input 
+                className="h-[65px] bg-white border border-[#e3e3e3] rounded-xl px-[25px] text-base" 
+                placeholder="Enter E - Mail ID" 
+                value={formData.email}
+                onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+              />
             </div>
             <div className="space-y-[15px] relative">
               <label className="font-medium text-[#111111] text-lg tracking-[0] leading-[normal]">Message</label>
-              <Textarea className="min-h-[148px] bg-white border border-[#e3e3e3] rounded-xl px-[25px] py-[20px] text-base resize-none" placeholder="Enter Text" />
+              <Textarea 
+                className="min-h-[148px] bg-white border border-[#e3e3e3] rounded-xl px-[25px] py-[20px] text-base resize-none" 
+                placeholder="Enter Text" 
+                value={formData.message}
+                onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+              />
               
               {/* WhatsApp - Absolute positioned to the right of the form */}
               <div className="absolute right-[-140px] bottom-[30px] flex items-center gap-2 group cursor-pointer z-20">
@@ -118,7 +146,7 @@ export const ContactUs = (): JSX.Element => {
               </div>
             </div>
             <Button 
-              onClick={() => setShowSuccess(true)}
+              onClick={handleSubmit}
               className="w-full h-[65px] bg-[#ff5f00] hover:bg-[#ff5f00]/90 rounded-xl font-bold text-white text-base"
             >
               Submit

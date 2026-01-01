@@ -5,6 +5,14 @@ import { SuccessModal } from "@/components/SuccessModal";
 
 export const FooterSection = (): JSX.Element => {
   const [showSuccess, setShowSuccess] = useState(false);
+  const [email, setEmail] = useState("");
+
+  const handleSend = () => {
+    if (email) {
+      setShowSuccess(true);
+      setEmail("");
+    }
+  };
 
   return (
     <section className="w-full flex justify-center">
@@ -39,11 +47,13 @@ export const FooterSection = (): JSX.Element => {
                   <Input
                     className="w-full h-full border-0 bg-transparent [font-family:'Epilogue',Helvetica] font-normal text-[#939393] text-sm tracking-[0] leading-[14px]"
                     placeholder="Input Email Address"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
                   />
                 </div>
 
                 <Button 
-                  onClick={() => setShowSuccess(true)}
+                  onClick={handleSend}
                   className="w-[105px] h-14 bg-[#ff5f00] rounded-lg hover:bg-[#ff5f00]/90 [font-family:'Epilogue',Helvetica] font-medium text-[#ffffff] text-base tracking-[0] leading-4"
                 >
                   Send
