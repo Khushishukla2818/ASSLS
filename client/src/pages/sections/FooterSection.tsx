@@ -15,90 +15,99 @@ export const FooterSection = (): JSX.Element => {
   };
 
   return (
-    <footer className="w-full flex flex-col items-center bg-white pt-[100px] pb-[45px] border-t font-['Poppins',_Helvetica]">
+    <footer className="w-full bg-[#F8F9FA] pt-24 pb-12 font-['Poppins',_Helvetica]">
       <SuccessModal isOpen={showSuccess} onClose={() => setShowSuccess(false)} />
       
-      <div className="w-full max-w-[1512px] px-[102px] flex justify-between mb-[95px]">
-        <div className="max-w-[342px] space-y-[35px]">
-          <div className="flex items-center gap-[15px]">
-            <img 
-              className="w-[69px] h-[76px] object-cover cursor-pointer" 
-              alt="Logo" 
-              src="/figmaAssets/image-1.png"
-              onClick={() => window.location.href = "/"}
-            />
-            <div className="flex flex-col">
-              <span className="font-bold text-[#111111] text-[35px] leading-none">ASSLS</span>
-              <span className="font-black text-[#05cd99] text-[10px] uppercase tracking-[0.2em]">A Hope For Better Lives</span>
-            </div>
-          </div>
-          
-          <div className="space-y-[15px]">
-            <p className="font-bold text-[#4a4a4a] text-lg">Updates right to your Inbox</p>
-            <div className="flex gap-2.5">
-              <Input 
-                className="h-14 bg-[#f8f9fa] border-0 rounded-lg px-[22px] text-base" 
-                placeholder="Email Address" 
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
+      <div className="max-w-[1512px] mx-auto px-[102px]">
+        <div className="flex flex-wrap justify-between gap-16 mb-24">
+          {/* Logo and Newsletter */}
+          <div className="max-w-[400px] space-y-10">
+            <div className="flex items-center gap-5">
+              <img 
+                className="w-20 h-20 object-contain cursor-pointer" 
+                alt="ASSLS Logo" 
+                src="/figmaAssets/image-1.png"
+                onClick={() => window.location.href = "/"}
               />
-              <Button 
-                onClick={handleSend}
-                className="w-[105px] h-14 bg-[#ff5f00] hover:bg-[#ff5f00]/90 rounded-lg font-bold text-white"
-              >
-                Send
-              </Button>
-            </div>
-          </div>
-        </div>
-
-        <div className="flex gap-[100px]">
-          <div className="space-y-[33px]">
-            <h4 className="font-bold text-[#111111] text-lg uppercase tracking-[0.2em]">Details</h4>
-            <div className="flex flex-col gap-[22px] font-normal text-[#4a4a4a] text-lg opacity-70">
-              <a href="#" className="hover:text-[#ff5f00] transition-colors">Location</a>
-              <a href="/contact" className="hover:text-[#ff5f00] transition-colors">Contact</a>
-            </div>
-          </div>
-          
-          <div className="space-y-[33px]">
-            <h4 className="font-bold text-[#111111] text-lg uppercase tracking-[0.2em]">Links</h4>
-            <div className="flex flex-col gap-[22px] font-normal text-[#4a4a4a] text-lg opacity-70">
-              <a href="/" className="hover:text-[#ff5f00] transition-colors">Home</a>
-              <a href="/about" className="hover:text-[#ff5f00] transition-colors">About</a>
-              <a href="/services" className="hover:text-[#ff5f00] transition-colors">Services</a>
-              <a href="/blog" className="hover:text-[#ff5f00] transition-colors">Blog</a>
-            </div>
-          </div>
-          
-          <div className="space-y-[33px] flex flex-col items-center">
-            <h4 className="font-bold text-[#111111] text-lg uppercase tracking-[0.2em]">ASSLS</h4>
-            <div className="flex flex-col gap-[22px] font-normal text-[#4a4a4a] text-lg opacity-70">
-              <a href="#" className="hover:text-[#ff5f00] transition-colors">Gallery</a>
-              <a href="#" className="hover:text-[#ff5f00] transition-colors">Donate</a>
-              <a href="#" className="hover:text-[#ff5f00] transition-colors">Community</a>
+              <div className="flex flex-col">
+                <span className="font-bold text-[#111111] text-[40px] leading-none tracking-tight">ASSLS</span>
+                <span className="text-[#05cd99] text-xs font-black uppercase tracking-[0.2em] mt-1">A Hope For Better Lives</span>
+              </div>
             </div>
             
-            <div className="mt-8 flex flex-col items-center gap-[15px]">
-              <div className="p-4 border border-[#e3e3e3] rounded-[32px] shadow-sm bg-white">
-                <img src="/figmaAssets/bi-qr-code.svg" alt="QR Code" className="w-[120px] h-[120px]" />
+            <div className="space-y-6">
+              <p className="font-bold text-gray-700 text-xl">Updates right to your Inbox</p>
+              <div className="flex gap-3">
+                <Input 
+                  className="h-16 bg-white border-2 border-gray-100 rounded-2xl px-6 text-lg focus:border-[#ff5f00] transition-colors" 
+                  placeholder="Email Address" 
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                />
+                <Button 
+                  onClick={handleSend}
+                  className="h-16 px-10 bg-[#ff5f00] hover:bg-[#ff5f00]/90 rounded-2xl font-bold text-white text-lg shadow-lg shadow-orange-200"
+                >
+                  Send
+                </Button>
               </div>
-              <span className="font-black text-[#e3e3e3] text-[10px] uppercase tracking-[0.4em]">Scan to donate</span>
+            </div>
+            
+            <div className="pt-4">
+              <div className="flex gap-10 text-sm font-black text-gray-400 uppercase tracking-widest">
+                <span>© ASSLS 2025</span>
+                <a href="#" className="hover:text-[#ff5f00] transition-colors">Privacy policy</a>
+                <a href="#" className="hover:text-[#ff5f00] transition-colors">Refund Policy</a>
+              </div>
+            </div>
+          </div>
+
+          {/* QR Code Section */}
+          <div className="flex flex-col items-center gap-6 py-4">
+            <div className="p-6 bg-white border-2 border-gray-50 rounded-[40px] shadow-xl">
+              <img src="/figmaAssets/bi-qr-code.svg" alt="QR Code" className="w-32 h-32" />
+            </div>
+            <span className="text-sm font-black text-gray-300 uppercase tracking-[0.4em]">Scan to donate</span>
+          </div>
+
+          {/* Links Grid */}
+          <div className="flex gap-20">
+            <div className="space-y-10">
+              <h4 className="font-bold text-gray-900 text-xl uppercase tracking-widest">Details</h4>
+              <ul className="space-y-6 text-gray-500 font-bold text-lg">
+                <li><a href="#" className="hover:text-[#ff5f00] transition-colors">Location</a></li>
+                <li><a href="/contact" className="hover:text-[#ff5f00] transition-colors">Contact</a></li>
+              </ul>
+            </div>
+            
+            <div className="space-y-10">
+              <h4 className="font-bold text-gray-900 text-xl uppercase tracking-widest">Links</h4>
+              <ul className="space-y-6 text-gray-500 font-bold text-lg">
+                <li><a href="/" className="hover:text-[#ff5f00] transition-colors">Home</a></li>
+                <li><a href="/about" className="hover:text-[#ff5f00] transition-colors">About</a></li>
+                <li><a href="/services" className="hover:text-[#ff5f00] transition-colors">Services</a></li>
+                <li><a href="/blog" className="hover:text-[#ff5f00] transition-colors">Blog</a></li>
+              </ul>
+            </div>
+            
+            <div className="space-y-10">
+              <h4 className="font-bold text-gray-900 text-xl uppercase tracking-widest">ASSLS</h4>
+              <ul className="space-y-6 text-gray-500 font-bold text-lg">
+                <li><a href="#" className="hover:text-[#ff5f00] transition-colors">Gallery</a></li>
+                <li><a href="#" className="hover:text-[#ff5f00] transition-colors">Donate</a></li>
+                <li><a href="#" className="hover:text-[#ff5f00] transition-colors">Community</a></li>
+              </ul>
             </div>
           </div>
         </div>
-      </div>
 
-      <div className="w-full max-w-[1512px] px-[102px] pt-[45px] border-t border-[#e3e3e3] flex justify-between items-center">
-        <div className="flex gap-[55px] font-black text-[#4a4a4a] text-sm uppercase tracking-[0.2em] opacity-50">
-          <span>© ASSLS 2025</span>
-          <a href="#" className="hover:text-gray-600 transition-colors">Privacy policy</a>
-          <a href="#" className="hover:text-gray-600 transition-colors">Refund Policy</a>
-        </div>
-        <div className="flex gap-[33px] items-center">
-          <img src="/figmaAssets/logos-youtube-icon.svg" className="w-8 h-8 cursor-pointer hover:opacity-80 transition-opacity" alt="YouTube" />
-          <img src="/figmaAssets/logos-instagram-icon.svg" className="w-8 h-8 cursor-pointer hover:opacity-80 transition-opacity" alt="Instagram" />
-          <img src="/figmaAssets/logos-facebook-icon.svg" className="w-8 h-8 cursor-pointer hover:opacity-80 transition-opacity" alt="Facebook" />
+        {/* Bottom Socials */}
+        <div className="flex justify-end pt-12 border-t border-gray-200">
+          <div className="flex gap-8">
+            <img src="/figmaAssets/logos-youtube-icon.svg" className="w-10 h-10 cursor-pointer hover:scale-110 transition-transform" alt="YouTube" />
+            <img src="/figmaAssets/logos-instagram-icon.svg" className="w-10 h-10 cursor-pointer hover:scale-110 transition-transform" alt="Instagram" />
+            <img src="/figmaAssets/logos-facebook-icon.svg" className="w-10 h-10 cursor-pointer hover:scale-110 transition-transform" alt="Facebook" />
+          </div>
         </div>
       </div>
     </footer>

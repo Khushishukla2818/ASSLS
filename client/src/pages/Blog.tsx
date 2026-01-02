@@ -2,8 +2,124 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { NavigationSection } from "@/pages/sections/NavigationSection";
 import { FooterSection } from "@/pages/sections/FooterSection";
+import { BlogDetailModal } from "@/components/BlogDetailModal";
+
+const blogPosts = [
+  {
+    title: "Skill Development Programme",
+    subtitle: "Empowering Youth and Women",
+    author: "ASSLS",
+    date: "May 20, 2025",
+    description: "Vocational training programs were organized for youth and women. These sessions focused on employable skills to support self-reliance.",
+    description1: "ASSLS organized a skill development programme to equip youth and women with practical skills that improve employability and self-reliance. The training focused on vocational skills, basic technical knowledge, and life skills required for today's job market. Participants received hands-on training under experienced trainers, helping them build confidence and practical understanding. The programme was designed to address local employment needs and support sustainable livelihoods.",
+    description2: "Beyond technical training, the programme emphasized personal development, communication skills, and financial awareness. Participants were guided on self-employment options, entrepreneurship, and linking their skills to available government schemes. Community involvement played a key role in encouraging participation and continued learning. The initiative also helped strengthen social inclusion by providing equal learning opportunities. Through such programmes, ASSLS continues to empower individuals and families toward long-term economic stability and growth.",
+    image: "/figmaAssets/rectangle-7.png",
+    thumbnails: [
+      "/figmaAssets/rectangle-7.png",
+      "/figmaAssets/rectangle-22592.png",
+      "/figmaAssets/rectangle-22584.png"
+    ],
+    moreCount: 15
+  },
+  {
+    title: "Drawing Competition",
+    subtitle: "Encouraging Creativity",
+    author: "ASSLS",
+    date: "May 16, 2025",
+    description: "ASSLS organized a drawing competition to encourage creativity, imagination, and self-expression among children and adolescents.",
+    description1: "ASSLS organized a drawing competition to encourage creativity, imagination, and self-expression among children and adolescents. The event provided a safe and joyful space for young participants to express their thoughts on themes such as cleanliness, environment, education, and community life through art. Children from different backgrounds enthusiastically participated, showcasing their talent and confidence. The activity helped nurture creativity while making learning fun and engaging.",
+    description2: "Beyond artistic expression, the competition aimed to build confidence, teamwork, and emotional development among children. Parents and community members actively supported the event, creating a positive and encouraging environment. The initiative also reinforced the importance of child development through creative activities. Through such programs, ASSLS continues to support holistic growth and joyful learning for children in the communities it serves.",
+    image: "/figmaAssets/rectangle-22587.png",
+    thumbnails: [
+      "/figmaAssets/rectangle-22587.png",
+      "/figmaAssets/rectangle-22588.png",
+      "/figmaAssets/rectangle-22589.png"
+    ],
+    moreCount: 21
+  },
+  {
+    title: "Job Mela Creating Employment",
+    subtitle: "Opportunities for Youth",
+    author: "ASSLS",
+    date: "May 26, 2025",
+    description: "ASSLS organized a Job Mela to connect unemployed youth with meaningful employment opportunities and career guidance.",
+    description1: "ASSLS organized a Job Mela to connect unemployed youth with meaningful employment opportunities and career guidance. The program brought together local employers, training institutions, and job seekers under one platform. Participants received information about job openings, skill requirements, and career pathways across different sectors. The initiative aimed to reduce unemployment and support youth in finding sustainable livelihoods.",
+    description2: "In addition to job placements, the Job Mela focused on building confidence and employability among participants. Career counseling sessions, resume guidance, and skill awareness talks were conducted to prepare youth for the job market. The event encouraged collaboration between communities and employers while promoting economic stability. Through initiatives like the Job Mela, ASSLS continues to empower youth and strengthen local employment ecosystems.",
+    image: "/figmaAssets/rectangle-1.png",
+    thumbnails: [
+      "/figmaAssets/rectangle-1.png",
+      "/figmaAssets/rectangle-2.png",
+      "/figmaAssets/rectangle-3.png"
+    ],
+    moreCount: 5
+  },
+  {
+    title: "Serving Food with Care and",
+    subtitle: "Compassion",
+    author: "ASSLS",
+    date: "May 26, 2025",
+    description: "ASSLS organized a food donation and serving drive to support vulnerable families, elderly people, and individuals in need.",
+    description1: "ASSLS organized a food donation and serving drive to support vulnerable families, elderly people, and individuals in need. The initiative aimed to ensure access to nutritious meals for those facing food insecurity. Volunteers actively participated in preparing and distributing food with dignity and care. Special attention was given to hygiene, quality, and nutritional value during food distribution.",
+    description2: "Community members joined hands, strengthening the spirit of unity and compassion. Through this initiative, ASSLS reaffirmed its commitment to serving humanity. The drive created a meaningful impact by bringing hope and relief to many lives. The initiative also created awareness about nutrition, food wastage, and the need for sustainable food support systems. Through such initiatives, ASSLS continues its commitment to building healthier, more resilient communities by addressing both immediate needs and long-term well-being.",
+    image: "/figmaAssets/rectangle-3-1.png",
+    thumbnails: [
+      "/figmaAssets/rectangle-3-1.png",
+      "/figmaAssets/rectangle-22588.png",
+      "/figmaAssets/rectangle-22589.png"
+    ],
+    moreCount: 12
+  },
+  {
+    title: "Swachh Bharat Cleanliness Drive",
+    subtitle: "for Healthy Communities",
+    author: "ASSLS",
+    date: "May 15, 2025",
+    description: "We conducted cleanliness drives in villages to promote hygiene and sanitation for a healthier environment.",
+    description1: "ASSLS organized a Swachh Bharat cleanliness drive to promote sanitation, hygiene, and healthy living practices in rural and semi-urban communities. The initiative aimed to create awareness about the importance of cleanliness in preventing diseases and improving overall quality of life. Through hands-on participation, community members were encouraged to take ownership of maintaining clean and safe surroundings.",
+    description2: "Along with cleanliness activities, ASSLS conducted awareness sessions on waste management, personal hygiene, and the responsible use of public spaces. Special focus was given to educating children and adolescents about the long-term benefits of a clean environment. The program strengthened community responsibility and collective action while supporting the national vision of Swachh Bharat.",
+    image: "/figmaAssets/rectangle-22593.png",
+    thumbnails: [
+      "/figmaAssets/rectangle-22593.png",
+      "/figmaAssets/rectangle-3-1.png",
+      "/figmaAssets/rectangle-5.png"
+    ],
+    moreCount: 19
+  },
+  {
+    title: "Farmer Awareness Camps",
+    author: "ASSLS",
+    date: "Jun 01, 2025",
+    description: "Awareness sessions were held on modern and sustainable farming practices. Farmers were guided on crop planning.",
+    description1: "Awareness sessions were held on modern and sustainable farming practices. Farmers were guided on crop planning and government schemes.",
+    description2: "The program focused on soil health, natural resource management, and climate-resilient agriculture to improve yields and sustainability.",
+    image: "/figmaAssets/rectangle-5.png",
+    thumbnails: [
+      "/figmaAssets/rectangle-5.png",
+      "/figmaAssets/rectangle-22580.png",
+      "/figmaAssets/rectangle-22581.png"
+    ],
+    moreCount: 11
+  },
+  {
+    title: "Medical Health Camps",
+    author: "ASSLS",
+    date: "Jun 07, 2025",
+    description: "Health check-up camps were conducted in remote rural areas. Doctors provided consultations and medicines.",
+    description1: "Health check-up camps were conducted in remote rural areas. Doctors provided consultations, medicines, and health guidance.",
+    description2: "The initiative focused on preventive care, general health screenings, and medical advice for vulnerable communities.",
+    image: "/figmaAssets/rectangle-8.png",
+    thumbnails: [
+      "/figmaAssets/rectangle-8.png",
+      "/figmaAssets/rectangle-22588.png",
+      "/figmaAssets/rectangle-22589.png"
+    ],
+    moreCount: 3
+  }
+];
 
 export const Blog = (): JSX.Element => {
+  const [selectedPostIndex, setSelectedPostIndex] = useState<number | null>(null);
+
   const categories = [
     { name: "Medical Camps", count: 40 },
     { name: "Speeches", count: 20 },
@@ -15,117 +131,18 @@ export const Blog = (): JSX.Element => {
     { name: "Agriculture", count: 32 },
   ];
 
-  const blogPosts = [
-    {
-      title: "Swach Bharath Activity",
-      author: "ASSLS",
-      date: "May 15, 2025",
-      description: "We conducted cleanliness drives in villages to promote hygiene and sanitation. The initiative encouraged community participation for a healthier environment.",
-      image: "/figmaAssets/rectangle-22593.png",
-      thumbnails: [
-        "/figmaAssets/rectangle-22593.png",
-        "/figmaAssets/rectangle-3-1.png",
-        "/figmaAssets/rectangle-5.png",
-        "/figmaAssets/rectangle-6.png",
-        "/figmaAssets/rectangle-7.png"
-      ],
-      moreCount: 19
-    },
-    {
-      title: "Drawing Competition",
-      author: "ASSLS",
-      date: "May 16, 2025",
-      description: "ASSLS organized a drawing competition to encourage creativity among children and adolescents. The activity helped children express their thoughts on social, environmental, and cultural themes.",
-      image: "/figmaAssets/rectangle-22587.png",
-      thumbnails: [
-        "/figmaAssets/rectangle-22587.png",
-        "/figmaAssets/rectangle-22588.png",
-        "/figmaAssets/rectangle-22589.png",
-        "/figmaAssets/rectangle-22590.png",
-        "/figmaAssets/rectangle-22591.png"
-      ],
-      moreCount: 21
-    },
-    {
-      title: "Skill Development Program",
-      author: "ASSLS",
-      date: "May 20, 2025",
-      description: "Vocational training programs were organized for youth and women. These sessions focused on employable skills to support self-reliance.",
-      image: "/figmaAssets/rectangle-7.png",
-      thumbnails: [
-        "/figmaAssets/rectangle-7.png",
-        "/figmaAssets/rectangle-22592.png",
-        "/figmaAssets/rectangle-22584.png",
-        "/figmaAssets/rectangle-22585.png",
-        "/figmaAssets/rectangle-22586.png"
-      ],
-      moreCount: 15
-    },
-    {
-      title: "Job Mela Programme",
-      author: "ASSLS",
-      date: "May 26, 2025",
-      description: "ASSLS organized job fairs connecting local youth with employment opportunities. The program helped bridge the gap between skills and jobs.",
-      image: "/figmaAssets/rectangle-1.png",
-      thumbnails: [
-        "/figmaAssets/rectangle-1.png",
-        "/figmaAssets/rectangle-2.png",
-        "/figmaAssets/rectangle-3.png",
-        "/figmaAssets/rectangle-4.png",
-        "/figmaAssets/rectangle-5.png"
-      ],
-      moreCount: 5
-    },
-    {
-      title: "Farmer Awareness Camps",
-      author: "ASSLS",
-      date: "Jun 01, 2025",
-      description: "Awareness sessions were held on modern and sustainable farming practices. Farmers were guided on crop planning and government schemes.",
-      image: "/figmaAssets/rectangle-5.png",
-      thumbnails: [
-        "/figmaAssets/rectangle-5.png",
-        "/figmaAssets/rectangle-22580.png",
-        "/figmaAssets/rectangle-22581.png",
-        "/figmaAssets/rectangle-22582.png",
-        "/figmaAssets/rectangle-22584.png"
-      ],
-      moreCount: 11
-    },
-    {
-      title: "Medical Health Camps",
-      author: "ASSLS",
-      date: "Jun 07, 2025",
-      description: "Health check-up camps were conducted in remote rural areas. Doctors provided consultations, medicines, and health guidance.",
-      image: "/figmaAssets/rectangle-8.png",
-      thumbnails: [
-        "/figmaAssets/rectangle-8.png",
-        "/figmaAssets/rectangle-22588.png",
-        "/figmaAssets/rectangle-22589.png",
-        "/figmaAssets/rectangle-22590.png",
-        "/figmaAssets/rectangle-22591.png"
-      ],
-      moreCount: 3
-    },
-    {
-      title: "Women Empowerment Training",
-      author: "ASSLS",
-      date: "May 26, 2025",
-      description: "Women received training in tailoring, small businesses, and entrepreneurship. The program aimed to improve financial independence and confidence.",
-      image: "/figmaAssets/rectangle-6.png",
-      thumbnails: [
-        "/figmaAssets/rectangle-6.png",
-        "/figmaAssets/rectangle-22586.png",
-        "/figmaAssets/rectangle-22585.png",
-        "/figmaAssets/rectangle-10.png",
-        "/figmaAssets/rectangle-22592.png"
-      ],
-      moreCount: 10
-    }
-  ];
-
   return (
     <div className="bg-[#F8F9FA] min-h-screen font-['Poppins',_Helvetica]">
       <NavigationSection />
+
+      {/* BlogDetailModal */}
+      <BlogDetailModal 
+        isOpen={selectedPostIndex !== null} 
+        onClose={() => setSelectedPostIndex(null)}
+        post={selectedPostIndex !== null ? blogPosts[selectedPostIndex] : null}
+        onPrev={() => setSelectedPostIndex(prev => prev !== null ? (prev > 0 ? prev - 1 : blogPosts.length - 1) : null)}
+        onNext={() => setSelectedPostIndex(prev => prev !== null ? (prev < blogPosts.length - 1 ? prev + 1 : 0) : null)}
+      />
 
       {/* Hero Header */}
       <div className="relative h-[600px] w-full overflow-hidden">
@@ -160,7 +177,11 @@ export const Blog = (): JSX.Element => {
           {/* Main Content */}
           <div className="flex-1 space-y-12">
             {blogPosts.map((post, index) => (
-              <div key={index} className="bg-white rounded-[20px] p-6 shadow-sm border border-gray-100 flex gap-8">
+              <div 
+                key={index} 
+                className="bg-white rounded-[20px] p-6 shadow-sm border border-gray-100 flex gap-8 cursor-pointer hover:shadow-md transition-shadow"
+                onClick={() => setSelectedPostIndex(index)}
+              >
                 <div className="w-[380px] h-[280px] flex-shrink-0 rounded-[15px] overflow-hidden">
                   <img src={post.image} alt={post.title} className="w-full h-full object-cover" />
                 </div>
@@ -176,7 +197,7 @@ export const Blog = (): JSX.Element => {
                     </div>
                   </div>
                   <h3 className="text-[32px] font-bold text-[#111111] mb-4">{post.title}</h3>
-                  <p className="text-[#4a4a4a] text-lg leading-relaxed opacity-70 mb-6">
+                  <p className="text-[#4a4a4a] text-lg leading-relaxed opacity-70 mb-6 line-clamp-3">
                     {post.description}
                   </p>
                   <div className="flex gap-3">
