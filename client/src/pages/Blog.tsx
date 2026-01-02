@@ -84,36 +84,6 @@ const blogPosts = [
       "/figmaAssets/rectangle-5.png"
     ],
     moreCount: 19
-  },
-  {
-    title: "Farmer Awareness Camps",
-    author: "ASSLS",
-    date: "Jun 01, 2025",
-    description: "Awareness sessions were held on modern and sustainable farming practices. Farmers were guided on crop planning.",
-    description1: "Awareness sessions were held on modern and sustainable farming practices. Farmers were guided on crop planning and government schemes.",
-    description2: "The program focused on soil health, natural resource management, and climate-resilient agriculture to improve yields and sustainability.",
-    image: "/figmaAssets/rectangle-5.png",
-    thumbnails: [
-      "/figmaAssets/rectangle-5.png",
-      "/figmaAssets/rectangle-22580.png",
-      "/figmaAssets/rectangle-22581.png"
-    ],
-    moreCount: 11
-  },
-  {
-    title: "Medical Health Camps",
-    author: "ASSLS",
-    date: "Jun 07, 2025",
-    description: "Health check-up camps were conducted in remote rural areas. Doctors provided consultations and medicines.",
-    description1: "Health check-up camps were conducted in remote rural areas. Doctors provided consultations, medicines, and health guidance.",
-    description2: "The initiative focused on preventive care, general health screenings, and medical advice for vulnerable communities.",
-    image: "/figmaAssets/rectangle-8.png",
-    thumbnails: [
-      "/figmaAssets/rectangle-8.png",
-      "/figmaAssets/rectangle-22588.png",
-      "/figmaAssets/rectangle-22589.png"
-    ],
-    moreCount: 3
   }
 ];
 
@@ -132,7 +102,7 @@ export const Blog = (): JSX.Element => {
   ];
 
   return (
-    <div className="bg-[#F8F9FA] min-h-screen font-['Poppins',_Helvetica]">
+    <div className="bg-[#FDFDFD] min-h-screen font-['Poppins',_Helvetica]">
       <NavigationSection />
 
       {/* BlogDetailModal */}
@@ -145,68 +115,68 @@ export const Blog = (): JSX.Element => {
       />
 
       {/* Hero Header */}
-      <div className="relative h-[600px] w-full overflow-hidden">
+      <div className="relative h-[650px] w-full overflow-hidden">
         <img 
           src="/figmaAssets/rectangle-3-2.png" 
           alt="Community Hero" 
           className="w-full h-full object-cover"
         />
         <div className="absolute inset-0 bg-black/40 flex flex-col justify-center px-[102px]">
-          <h1 className="text-white text-7xl font-bold max-w-4xl mb-6 leading-tight">
+          <h1 className="text-white text-[80px] font-bold max-w-[1000px] mb-8 leading-[1] tracking-tight">
             Real Stories Creating Real Change in Communities.
           </h1>
-          <p className="text-white/90 text-xl max-w-2xl font-light">
+          <p className="text-white/90 text-[24px] max-w-[800px] font-light leading-relaxed">
             Read about our programs, people, and progress across communities. These stories showcase the impact created through collective effort.
           </p>
         </div>
       </div>
 
       {/* Breadcrumbs & Content Container */}
-      <div className="max-w-[1512px] mx-auto px-[102px] py-12">
-        <div className="flex items-center gap-2 text-sm text-gray-500 mb-8 font-medium">
-          <a href="/" className="hover:text-[#ff5f00]">Home</a>
-          <span>&gt;</span>
-          <a href="/blog" className="hover:text-[#ff5f00]">Blog</a>
-          <span>&gt;</span>
-          <span className="text-gray-900">All Blogs</span>
+      <div className="max-w-[1512px] mx-auto px-[102px] py-20">
+        <div className="flex items-center gap-3 text-lg text-gray-500 mb-12 font-medium">
+          <a href="/" className="hover:text-[#ff5f00] transition-colors">Home</a>
+          <span className="opacity-30">/</span>
+          <a href="/blog" className="hover:text-[#ff5f00] transition-colors">Blog</a>
+          <span className="opacity-30">/</span>
+          <span className="text-[#111111]">All Blogs</span>
         </div>
 
-        <h2 className="text-[48px] font-bold text-[#111111] mb-12">All Blogs</h2>
+        <h2 className="text-[64px] font-bold text-[#111111] mb-20 tracking-tight">All Blogs</h2>
 
-        <div className="flex gap-12">
+        <div className="flex gap-20">
           {/* Main Content */}
-          <div className="flex-1 space-y-12">
+          <div className="flex-1 space-y-16">
             {blogPosts.map((post, index) => (
               <div 
                 key={index} 
-                className="bg-white rounded-[20px] p-6 shadow-sm border border-gray-100 flex gap-8 cursor-pointer hover:shadow-md transition-shadow"
+                className="bg-white rounded-[40px] p-8 shadow-sm border border-[#E3E3E3]/50 flex gap-10 cursor-pointer hover:shadow-xl hover:scale-[1.01] transition-all duration-300"
                 onClick={() => setSelectedPostIndex(index)}
               >
-                <div className="w-[380px] h-[280px] flex-shrink-0 rounded-[15px] overflow-hidden">
+                <div className="w-[450px] h-[320px] flex-shrink-0 rounded-[30px] overflow-hidden shadow-sm">
                   <img src={post.image} alt={post.title} className="w-full h-full object-cover" />
                 </div>
-                <div className="flex-1">
-                  <div className="flex items-center gap-6 mb-4 text-sm font-medium text-gray-400">
-                    <div className="flex items-center gap-2">
-                      <img src="/figmaAssets/phone-icon.svg" className="w-4 h-4 grayscale" alt="author" />
+                <div className="flex-1 py-4">
+                  <div className="flex items-center gap-8 mb-6 text-[16px] font-bold text-[#111111]/30 uppercase tracking-widest">
+                    <div className="flex items-center gap-3">
+                      <img src="/figmaAssets/phone-icon.svg" className="w-5 h-5 opacity-20" alt="author" />
                       <span>{post.author}</span>
                     </div>
-                    <div className="flex items-center gap-2">
-                      <img src="/figmaAssets/calendar-icon.svg" className="w-4 h-4 grayscale" alt="date" />
+                    <div className="flex items-center gap-3">
+                      <img src="/figmaAssets/calendar-icon.svg" className="w-5 h-5 opacity-20" alt="date" />
                       <span>{post.date}</span>
                     </div>
                   </div>
-                  <h3 className="text-[32px] font-bold text-[#111111] mb-4">{post.title}</h3>
-                  <p className="text-[#4a4a4a] text-lg leading-relaxed opacity-70 mb-6 line-clamp-3">
+                  <h3 className="text-[40px] font-bold text-[#111111] mb-6 leading-tight tracking-tight">{post.title}</h3>
+                  <p className="text-[#111111]/60 text-xl leading-relaxed mb-8 line-clamp-3">
                     {post.description}
                   </p>
-                  <div className="flex gap-3">
+                  <div className="flex gap-4">
                     {post.thumbnails.slice(0, 4).map((thumb, i) => (
-                      <div key={i} className="w-16 h-16 rounded-lg overflow-hidden border border-gray-100">
+                      <div key={i} className="w-[70px] h-[70px] rounded-2xl overflow-hidden border border-[#E3E3E3]">
                         <img src={thumb} alt="Thumbnail" className="w-full h-full object-cover" />
                       </div>
                     ))}
-                    <div className="w-16 h-16 rounded-lg bg-gray-100 flex items-center justify-center text-gray-400 text-sm font-bold border border-gray-100">
+                    <div className="w-[70px] h-[70px] rounded-2xl bg-[#F8F9FA] flex items-center justify-center text-[#111111]/40 text-sm font-black border border-[#E3E3E3]">
                       +{post.moreCount}
                     </div>
                   </div>
@@ -215,31 +185,31 @@ export const Blog = (): JSX.Element => {
             ))}
 
             {/* Pagination */}
-            <div className="flex items-center justify-center gap-8 py-12 text-xl font-medium">
-              <button className="text-gray-400 hover:text-[#ff5f00] transition-colors">Previous</button>
-              <div className="flex items-center gap-6">
+            <div className="flex items-center justify-center gap-10 py-16 text-2xl font-bold">
+              <button className="text-[#111111]/20 hover:text-[#ff5f00] transition-colors uppercase tracking-widest text-lg">Previous</button>
+              <div className="flex items-center gap-8">
                 <span className="text-[#ff5f00]">1</span>
-                <span className="text-gray-400">2</span>
-                <span className="text-gray-400">3</span>
-                <span className="text-gray-400">....</span>
-                <span className="text-gray-400">9</span>
+                <span className="text-[#111111]/20 cursor-pointer hover:text-[#111111]/40 transition-colors">2</span>
+                <span className="text-[#111111]/20 cursor-pointer hover:text-[#111111]/40 transition-colors">3</span>
+                <span className="text-[#111111]/10">....</span>
+                <span className="text-[#111111]/20 cursor-pointer hover:text-[#111111]/40 transition-colors">9</span>
               </div>
-              <button className="text-[#ff5f00] font-bold">Next</button>
+              <button className="text-[#ff5f00] hover:text-[#ff5f00]/80 transition-colors uppercase tracking-widest text-lg">Next</button>
             </div>
           </div>
 
           {/* Sidebar */}
-          <div className="w-[350px] space-y-12">
+          <div className="w-[380px] space-y-16">
             <div>
-              <h3 className="text-[32px] font-bold text-[#111111] mb-8">Categories</h3>
+              <h3 className="text-[40px] font-bold text-[#111111] mb-10 tracking-tight">Categories</h3>
               <div className="space-y-4">
                 {categories.map((cat, index) => (
                   <div 
                     key={index} 
-                    className="flex items-center justify-between p-4 bg-white border border-gray-100 rounded-xl hover:border-[#ff5f00] hover:text-[#ff5f00] transition-all cursor-pointer group"
+                    className="flex items-center justify-between p-6 bg-white border border-[#E3E3E3]/50 rounded-2xl hover:border-[#ff5f00] hover:shadow-lg hover:scale-[1.02] transition-all cursor-pointer group"
                   >
-                    <span className="text-lg font-medium text-gray-700 group-hover:text-[#ff5f00]">{cat.name}</span>
-                    <span className="text-sm text-gray-300 font-bold">({cat.count})</span>
+                    <span className="text-xl font-bold text-[#111111]/70 group-hover:text-[#ff5f00]">{cat.name}</span>
+                    <span className="text-sm text-[#111111]/20 font-black">({cat.count})</span>
                   </div>
                 ))}
               </div>
@@ -249,23 +219,23 @@ export const Blog = (): JSX.Element => {
       </div>
 
       {/* Donation Banner */}
-      <div className="max-w-[1512px] mx-auto px-[102px] mb-20">
-        <div className="bg-[#E5E5E5] rounded-[20px] overflow-hidden flex items-center p-0 h-[400px]">
-          <div className="w-1/3 h-full">
+      <div className="max-w-[1512px] mx-auto px-[102px] mb-32">
+        <div className="bg-white rounded-[40px] overflow-hidden flex items-center p-0 h-[450px] shadow-xl border border-[#E3E3E3]/30">
+          <div className="w-[40%] h-full">
             <img 
               src="/figmaAssets/placeholder---image-1.png" 
               alt="Child" 
-              className="w-full h-full object-cover grayscale"
+              className="w-full h-full object-cover grayscale opacity-90"
             />
           </div>
-          <div className="flex-1 px-16 flex flex-col items-start text-left">
-            <h2 className="text-[54px] font-bold text-[#111111] mb-4 uppercase leading-none">
-              Stand with those who need it most.
+          <div className="flex-1 px-20 flex flex-col items-start text-left">
+            <h2 className="text-[64px] font-bold text-[#111111] mb-6 uppercase leading-[0.9] tracking-tighter">
+              Stand with those <br/> who need it most.
             </h2>
-            <p className="text-[#ff5f00] text-2xl font-medium mb-12">
+            <p className="text-[#ff5f00] text-3xl font-bold mb-12 tracking-tight">
               Your Donation Helps Communities Grow And Thrive.
             </p>
-            <Button className="bg-white text-gray-900 hover:bg-gray-100 h-auto px-12 py-5 rounded-xl font-bold text-2xl shadow-sm">
+            <Button className="bg-[#111111] text-white hover:bg-[#333] h-[80px] px-16 rounded-2xl font-bold text-2xl shadow-xl transition-all no-default-hover-elevate">
               Donate Us
             </Button>
           </div>
