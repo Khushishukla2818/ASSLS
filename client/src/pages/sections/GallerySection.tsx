@@ -1,74 +1,88 @@
-import { Button } from "@/components/ui/button";
-
-const galleryImages = [
-  {
-    src: "/figmaAssets/rectangle-4.png",
-    alt: "Gallery image 1",
-    className: "col-start-1 row-start-1",
-  },
-  {
-    src: "/figmaAssets/rectangle-6.png",
-    alt: "Gallery image 2",
-    className: "col-start-2 row-start-1",
-  },
-  {
-    src: "/figmaAssets/rectangle-8.png",
-    alt: "Gallery image 3",
-    className: "col-start-3 row-start-1",
-    hasOverlay: true,
-  },
-  {
-    src: "/figmaAssets/rectangle-5.png",
-    alt: "Gallery image 4",
-    className: "col-start-1 row-start-2",
-  },
-  {
-    src: "/figmaAssets/rectangle-7.png",
-    alt: "Gallery image 5",
-    className: "col-start-2 row-start-2",
-  },
-  {
-    src: "/figmaAssets/rectangle-10.png",
-    alt: "Gallery image 6",
-    className: "col-start-3 row-start-2",
-  },
-];
+import { useState } from "react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
 export const GallerySection = (): JSX.Element => {
+  const [currentPage, setCurrentPage] = useState(1);
+  const totalPages = 5;
+
+  const galleryPages = [
+    // Page 1
+    [
+      { src: "/figmaAssets/rectangle-3-1.png", className: "col-span-1 row-span-2 h-[440px]" },
+      { src: "/figmaAssets/rectangle-22593.png", className: "col-span-2 row-span-1 h-[210px]" },
+      { src: "/figmaAssets/placeholder---image-1.png", className: "col-span-3 row-span-1 h-[210px]" },
+      { src: "/figmaAssets/rectangle-5.png", className: "col-span-2 row-span-1 h-[210px]" },
+      { src: "/figmaAssets/placeholder---image-4.png", className: "col-span-2 row-span-1 h-[210px]" },
+      { src: "/figmaAssets/placeholder---image-6.png", className: "col-span-1 row-span-1 h-[210px]" },
+    ],
+    // Page 2
+    [
+      { src: "/figmaAssets/rectangle-1.png", className: "col-span-2 row-span-1 h-[210px]" },
+      { src: "/figmaAssets/rectangle-2.png", className: "col-span-2 row-span-2 h-[440px]" },
+      { src: "/figmaAssets/rectangle-3.png", className: "col-span-2 row-span-1 h-[210px]" },
+      { src: "/figmaAssets/rectangle-4.png", className: "col-span-1 row-span-1 h-[210px]" },
+      { src: "/figmaAssets/rectangle-5.png", className: "col-span-1 row-span-1 h-[210px]" },
+      { src: "/figmaAssets/rectangle-6.png", className: "col-span-2 row-span-1 h-[210px]" },
+    ],
+    // Page 3
+    [
+      { src: "/figmaAssets/rectangle-7.png", className: "col-span-1 row-span-1 h-[210px]" },
+      { src: "/figmaAssets/rectangle-8.png", className: "col-span-1 row-span-2 h-[440px]" },
+      { src: "/figmaAssets/rectangle-10.png", className: "col-span-1 row-span-1 h-[210px]" },
+      { src: "/figmaAssets/rectangle-22578.png", className: "col-span-2 row-span-1 h-[210px]" },
+      { src: "/figmaAssets/rectangle-22580.png", className: "col-span-1 row-span-1 h-[210px]" },
+      { src: "/figmaAssets/rectangle-22581.png", className: "col-span-1 row-span-1 h-[210px]" },
+      { src: "/figmaAssets/rectangle-22582.png", className: "col-span-1 row-span-1 h-[210px]" },
+    ]
+  ];
+
+  const currentImages = galleryPages[currentPage - 1] || galleryPages[0];
+
   return (
-    <section className="w-full flex justify-center bg-[#ffffff] py-20 relative">
-      <div className="w-full max-w-[1512px] px-4 relative">
-        <h2 className="[-webkit-text-stroke:1px_#ffffff] [font-family:'Playball',Helvetica] font-normal text-[#ff5f00] text-[64px] text-center tracking-[1.28px] leading-[76.8px] mb-8">
+    <section className="w-full flex justify-center bg-white py-20 font-['Poppins',_Helvetica]">
+      <div className="w-full max-w-[1512px] px-[102px]">
+        <h2 className="font-['Yellowtail',_cursive] text-[#ff5f00] text-[64px] text-center mb-16">
           Gallery
         </h2>
 
-        <p className="max-w-[1160px] mx-auto [font-family:'Poppins',Helvetica] font-normal text-[#a2a2a2] text-2xl text-center tracking-[0] leading-[normal] mb-16">
-          A Glimpse into Our Daily Service. Transforming lives through
-          sustainable agriculture, healthcare camps, and dedicated elder care
-          initiatives.
-        </p>
+        <div className="grid grid-cols-6 gap-5 mb-12">
+          {currentImages.map((img, idx) => (
+            <div 
+              key={`${currentPage}-${idx}`} 
+              className={`rounded-[15px] overflow-hidden shadow-sm ${img.className} transition-all duration-500 hover:shadow-xl hover:-translate-y-1`}
+            >
+              <img 
+                src={img.src} 
+                alt={`Gallery ${idx}`} 
+                className="w-full h-full object-cover" 
+              />
+            </div>
+          ))}
+        </div>
 
-        <div className="relative max-w-[1160px] mx-auto">
-          <div className="grid grid-cols-3 gap-6 mb-0">
-            {galleryImages.map((image, index) => (
-              <div key={index} className={`relative ${image.className}`}>
-                <img
-                  className="w-full h-[207px] rounded-lg object-cover"
-                  alt={image.alt}
-                  src={image.src}
-                />
-                {image.hasOverlay && (
-                  <div className="absolute inset-0 bg-[#00000080] rounded-lg shadow-[0px_4px_8px_#00000040]" />
-                )}
-              </div>
-            ))}
+        {/* Pagination */}
+        <div className="flex items-center justify-center gap-6">
+          <button 
+            onClick={() => setCurrentPage(prev => Math.max(1, prev - 1))}
+            disabled={currentPage === 1}
+            className="text-[#ff5f00] disabled:text-gray-300 transition-colors"
+          >
+            <ChevronLeft className="w-8 h-8" />
+          </button>
+          
+          <div className="flex items-center gap-1 font-medium text-2xl">
+            <span className="text-[#ff5f00]">{currentPage}</span>
+            <span className="text-gray-300">/</span>
+            <span className="text-gray-300">{totalPages}</span>
           </div>
 
-          <Button className="absolute -right-4 top-1/2 -translate-y-1/2 bg-[#ff9b60] hover:bg-[#ff8a4d] rounded-[16px_0px_0px_16px] w-[51px] h-[218px] p-0 flex items-center justify-center">
-            <span className="rotate-[-88.75deg] [font-family:'Poppins',Helvetica] font-medium text-[#ffffff] text-2xl tracking-[0] leading-[normal] whitespace-nowrap">
-              view All
-            </span>
-          </Button>
+          <button 
+            onClick={() => setCurrentPage(prev => Math.min(totalPages, prev + 1))}
+            disabled={currentPage === totalPages}
+            className="text-[#ff5f00] disabled:text-gray-300 transition-colors"
+          >
+            <ChevronRight className="w-8 h-8" />
+          </button>
         </div>
       </div>
     </section>
