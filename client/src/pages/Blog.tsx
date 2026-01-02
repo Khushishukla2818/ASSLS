@@ -60,6 +60,66 @@ export const Blog = (): JSX.Element => {
         "/figmaAssets/rectangle-22586.png"
       ],
       moreCount: 15
+    },
+    {
+      title: "Job Mela Programme",
+      author: "ASSLS",
+      date: "May 26, 2025",
+      description: "ASSLS organized job fairs connecting local youth with employment opportunities. The program helped bridge the gap between skills and jobs.",
+      image: "/figmaAssets/rectangle-1.png",
+      thumbnails: [
+        "/figmaAssets/rectangle-1.png",
+        "/figmaAssets/rectangle-2.png",
+        "/figmaAssets/rectangle-3.png",
+        "/figmaAssets/rectangle-4.png",
+        "/figmaAssets/rectangle-5.png"
+      ],
+      moreCount: 5
+    },
+    {
+      title: "Farmer Awareness Camps",
+      author: "ASSLS",
+      date: "Jun 01, 2025",
+      description: "Awareness sessions were held on modern and sustainable farming practices. Farmers were guided on crop planning and government schemes.",
+      image: "/figmaAssets/rectangle-5.png",
+      thumbnails: [
+        "/figmaAssets/rectangle-5.png",
+        "/figmaAssets/rectangle-22580.png",
+        "/figmaAssets/rectangle-22581.png",
+        "/figmaAssets/rectangle-22582.png",
+        "/figmaAssets/rectangle-22584.png"
+      ],
+      moreCount: 11
+    },
+    {
+      title: "Medical Health Camps",
+      author: "ASSLS",
+      date: "Jun 07, 2025",
+      description: "Health check-up camps were conducted in remote rural areas. Doctors provided consultations, medicines, and health guidance.",
+      image: "/figmaAssets/rectangle-8.png",
+      thumbnails: [
+        "/figmaAssets/rectangle-8.png",
+        "/figmaAssets/rectangle-22588.png",
+        "/figmaAssets/rectangle-22589.png",
+        "/figmaAssets/rectangle-22590.png",
+        "/figmaAssets/rectangle-22591.png"
+      ],
+      moreCount: 3
+    },
+    {
+      title: "Women Empowerment Training",
+      author: "ASSLS",
+      date: "May 26, 2025",
+      description: "Women received training in tailoring, small businesses, and entrepreneurship. The program aimed to improve financial independence and confidence.",
+      image: "/figmaAssets/rectangle-6.png",
+      thumbnails: [
+        "/figmaAssets/rectangle-6.png",
+        "/figmaAssets/rectangle-22586.png",
+        "/figmaAssets/rectangle-22585.png",
+        "/figmaAssets/rectangle-10.png",
+        "/figmaAssets/rectangle-22592.png"
+      ],
+      moreCount: 10
     }
   ];
 
@@ -70,7 +130,7 @@ export const Blog = (): JSX.Element => {
       {/* Hero Header */}
       <div className="relative h-[600px] w-full overflow-hidden">
         <img 
-          src="/figmaAssets/placeholder---image.png" 
+          src="/figmaAssets/rectangle-3-2.png" 
           alt="Community Hero" 
           className="w-full h-full object-cover"
         />
@@ -107,13 +167,11 @@ export const Blog = (): JSX.Element => {
                 <div className="flex-1">
                   <div className="flex items-center gap-6 mb-4 text-sm font-medium text-gray-400">
                     <div className="flex items-center gap-2">
-                      <div className="w-5 h-5 rounded-full border border-gray-200 flex items-center justify-center">
-                        <span className="text-[8px] text-gray-400">👤</span>
-                      </div>
+                      <img src="/figmaAssets/phone-icon.svg" className="w-4 h-4 grayscale" alt="author" />
                       <span>{post.author}</span>
                     </div>
                     <div className="flex items-center gap-2">
-                      <span className="text-gray-300">📅</span>
+                      <img src="/figmaAssets/calendar-icon.svg" className="w-4 h-4 grayscale" alt="date" />
                       <span>{post.date}</span>
                     </div>
                   </div>
@@ -174,7 +232,7 @@ export const Blog = (): JSX.Element => {
         <div className="bg-[#E5E5E5] rounded-[20px] overflow-hidden flex items-center p-0 h-[400px]">
           <div className="w-1/3 h-full">
             <img 
-              src="/figmaAssets/rectangle-3-1.png" 
+              src="/figmaAssets/placeholder---image-1.png" 
               alt="Child" 
               className="w-full h-full object-cover grayscale"
             />
