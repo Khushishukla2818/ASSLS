@@ -15,7 +15,7 @@ export const FooterSection = (): JSX.Element => {
   };
 
   return (
-    <footer className="w-full bg-white pt-[120px] pb-16 font-['Poppins',_Helvetica]">
+    <footer className="w-full bg-[#F8F9FA] pt-[120px] pb-16 font-['Poppins',_Helvetica]">
       <SuccessModal isOpen={showSuccess} onClose={() => setShowSuccess(false)} />
       
       <div className="max-w-[1512px] mx-auto px-[102px]">
@@ -39,7 +39,7 @@ export const FooterSection = (): JSX.Element => {
               <p className="font-bold text-[#111111] text-[22px] tracking-tight">Updates right to your Inbox</p>
               <div className="flex gap-4">
                 <Input 
-                  className="h-[70px] bg-[#F8F9FA] border-none rounded-2xl px-8 text-xl focus-visible:ring-1 focus-visible:ring-[#ff5f00] transition-all" 
+                  className="h-[70px] bg-white border-2 border-gray-100 rounded-2xl px-8 text-xl focus:border-[#ff5f00] transition-colors" 
                   placeholder="Email Address" 
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
@@ -57,16 +57,16 @@ export const FooterSection = (): JSX.Element => {
           {/* Links Grid */}
           <div className="flex gap-[120px]">
             <div className="space-y-10">
-              <h4 className="font-bold text-[#111111] text-[18px] uppercase tracking-[0.2em] opacity-100">Details</h4>
-              <ul className="space-y-6 text-[#111111] font-medium text-[20px] opacity-60">
+              <h4 className="font-bold text-[#111111] text-[18px] uppercase tracking-[0.2em]">Details</h4>
+              <ul className="space-y-6 text-[#111111]/60 font-bold text-[20px]">
                 <li><a href="#" className="hover:text-[#ff5f00] transition-colors">Location</a></li>
                 <li><a href="/contact" className="hover:text-[#ff5f00] transition-colors">Contact</a></li>
               </ul>
             </div>
             
             <div className="space-y-10">
-              <h4 className="font-bold text-[#111111] text-[18px] uppercase tracking-[0.2em] opacity-100">Links</h4>
-              <ul className="space-y-6 text-[#111111] font-medium text-[20px] opacity-60">
+              <h4 className="font-bold text-[#111111] text-[18px] uppercase tracking-[0.2em]">Links</h4>
+              <ul className="space-y-6 text-[#111111]/60 font-bold text-[20px]">
                 <li><a href="/" className="hover:text-[#ff5f00] transition-colors">Home</a></li>
                 <li><a href="/about" className="hover:text-[#ff5f00] transition-colors">About</a></li>
                 <li><a href="/services" className="hover:text-[#ff5f00] transition-colors">Services</a></li>
@@ -75,8 +75,8 @@ export const FooterSection = (): JSX.Element => {
             </div>
             
             <div className="space-y-10">
-              <h4 className="font-bold text-[#111111] text-[18px] uppercase tracking-[0.2em] opacity-100">ASSLS</h4>
-              <ul className="space-y-6 text-[#111111] font-medium text-[20px] opacity-60">
+              <h4 className="font-bold text-[#111111] text-[18px] uppercase tracking-[0.2em]">ASSLS</h4>
+              <ul className="space-y-6 text-[#111111]/60 font-bold text-[20px]">
                 <li><a href="#" className="hover:text-[#ff5f00] transition-colors">Gallery</a></li>
                 <li><a href="#" className="hover:text-[#ff5f00] transition-colors">Donate</a></li>
                 <li><a href="#" className="hover:text-[#ff5f00] transition-colors">Community</a></li>
@@ -86,24 +86,24 @@ export const FooterSection = (): JSX.Element => {
 
           {/* QR Code Section */}
           <div className="flex flex-col items-center gap-6">
-            <div className="p-8 bg-white border border-[#E3E3E3] rounded-[48px] shadow-sm">
+            <div className="p-8 bg-white border-2 border-gray-50 rounded-[48px] shadow-xl">
               <img src="/figmaAssets/bi-qr-code.svg" alt="QR Code" className="w-[140px] h-[140px]" />
             </div>
-            <span className="text-[12px] font-black text-[#111111] opacity-20 uppercase tracking-[0.4em]">Scan to donate</span>
+            <span className="text-[12px] font-black text-[#111111]/20 uppercase tracking-[0.4em]">Scan to donate</span>
           </div>
         </div>
 
         {/* Bottom Section */}
-        <div className="pt-12 border-t border-[#E3E3E3] flex justify-between items-center">
-          <div className="flex gap-[60px] text-[14px] font-black text-[#111111] opacity-30 uppercase tracking-[0.2em]">
+        <div className="pt-12 border-t border-gray-200 flex justify-between items-center">
+          <div className="flex gap-[60px] text-[14px] font-black text-[#111111]/30 uppercase tracking-[0.2em]">
             <span>© ASSLS 2025</span>
             <a href="#" className="hover:text-[#ff5f00] transition-colors">Privacy policy</a>
             <a href="#" className="hover:text-[#ff5f00] transition-colors">Refund Policy</a>
           </div>
           <div className="flex gap-10 items-center">
-            <img src="/figmaAssets/logos-youtube-icon.svg" className="w-10 h-10 cursor-pointer hover:opacity-80 transition-opacity" alt="YouTube" />
-            <img src="/figmaAssets/logos-instagram-icon.svg" className="w-10 h-10 cursor-pointer hover:opacity-80 transition-opacity" alt="Instagram" />
-            <img src="/figmaAssets/logos-facebook-icon.svg" className="w-10 h-10 cursor-pointer hover:opacity-80 transition-opacity" alt="Facebook" />
+            <img src="/figmaAssets/logos-youtube-icon.svg" className="w-10 h-10 cursor-pointer hover:scale-110 transition-transform" alt="YouTube" />
+            <img src="/figmaAssets/logos-instagram-icon.svg" className="w-10 h-10 cursor-pointer hover:scale-110 transition-transform" alt="Instagram" />
+            <img src="/figmaAssets/logos-facebook-icon.svg" className="w-10 h-10 cursor-pointer hover:scale-110 transition-transform" alt="Facebook" />
           </div>
         </div>
       </div>

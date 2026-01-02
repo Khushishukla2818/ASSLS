@@ -20,7 +20,10 @@ export const BlogDetailModal = ({ isOpen, onClose, post, onPrev, onNext }: BlogD
   if (!isOpen || !post) return null;
 
   return (
-    <div className="fixed inset-0 z-[110] flex items-center justify-center bg-black/60 backdrop-blur-sm p-4 md:p-10 overflow-hidden">
+    <div 
+      className="fixed inset-0 z-[110] flex items-center justify-center bg-black/60 backdrop-blur-sm p-4 md:p-10 overflow-hidden"
+      onClick={onClose}
+    >
       <div 
         className="bg-white w-full max-w-[1200px] max-h-[90vh] rounded-[40px] shadow-2xl relative overflow-hidden flex flex-col md:flex-row animate-in fade-in zoom-in duration-300"
         onClick={(e) => e.stopPropagation()}
@@ -36,7 +39,7 @@ export const BlogDetailModal = ({ isOpen, onClose, post, onPrev, onNext }: BlogD
         </div>
 
         {/* Right Side: Content */}
-        <div className="flex-1 p-6 md:p-12 lg:p-16 relative flex flex-col overflow-y-auto">
+        <div className="flex-1 p-6 md:p-12 lg:p-16 relative flex flex-col overflow-y-auto bg-white">
           <button 
             onClick={onClose}
             className="absolute top-6 right-6 md:top-10 md:right-10 text-gray-400 hover:text-gray-600 transition-colors z-20 bg-white/80 rounded-full p-1"
