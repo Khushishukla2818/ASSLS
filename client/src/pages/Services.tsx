@@ -1,3 +1,6 @@
+import { NavigationSection } from "./sections/NavigationSection";
+import { FooterSection } from "./sections/FooterSection";
+
 export const Services = (): JSX.Element => {
   const services = [
     {
@@ -64,20 +67,8 @@ export const Services = (): JSX.Element => {
 
   return (
     <div className="w-full bg-white font-sans">
-      {/* Header */}
-      <header className="sticky top-0 z-50 bg-white shadow-sm">
-        <div className="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
-          <img src="/figmaAssets/image-1.png" alt="ASSLS Logo" className="h-16" />
-          <nav className="flex gap-8">
-            <a href="/" className="text-gray-700 hover:text-orange-500 font-medium text-lg">Home</a>
-            <a href="/about" className="text-gray-700 hover:text-orange-500 font-medium text-lg">About us</a>
-            <a href="/services" className="text-[#ff5f00] font-bold border-b-4 border-[#ff5f00] pb-1 text-lg">Services</a>
-            <a href="/contact" className="text-gray-700 hover:text-orange-500 font-medium text-lg">Contact us</a>
-          </nav>
-          <button className="border-2 border-[#ff5f00] text-[#ff5f00] px-8 py-2 rounded-xl font-bold hover:bg-orange-50 transition text-lg">Donate</button>
-        </div>
-      </header>
-
+      <NavigationSection />
+      {/* Hero Section */}
       {/* Hero Section */}
       <section className="bg-[#6094BD] text-white py-20 px-4 md:px-8 lg:px-16">
         <div className="max-w-7xl mx-auto">

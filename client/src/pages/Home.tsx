@@ -11,10 +11,15 @@ import { ResponsibilitiesSection } from "./sections/ResponsibilitiesSection";
 import { TeamSection } from "./sections/TeamSection";
 import { TestimonialsSection } from "./sections/TestimonialsSection";
 import { VisionStatementSection } from "./sections/VisionStatementSection";
+import { SuccessModal } from "@/components/SuccessModal";
+import { useState } from "react";
 
 export const Home = (): JSX.Element => {
+  const [showSuccess, setShowSuccess] = useState(false);
+
   return (
     <div className="bg-[#ffffff] overflow-hidden w-full relative">
+      <SuccessModal isOpen={showSuccess} onClose={() => setShowSuccess(false)} />
       <NavigationSection />
       <HeaderSection />
       <AboutUsSection />

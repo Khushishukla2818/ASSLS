@@ -8,6 +8,7 @@ import NotFound from "@/pages/not-found";
 import { Home } from "@/pages/Home";
 import { AboutUs } from "@/pages/AboutUs";
 import { Services } from "@/pages/Services";
+import { Blog } from "@/pages/Blog";
 import { ContactUs } from "@/pages/ContactUs";
 
 function Router() {
@@ -17,6 +18,7 @@ function Router() {
       <Route path="/" component={Home} />
       <Route path="/about" component={AboutUs} />
       <Route path="/services" component={Services} />
+      <Route path="/blog" component={Blog} />
       <Route path="/contact" component={ContactUs} />
       {/* Fallback to 404 */}
       <Route component={NotFound} />
